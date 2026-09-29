@@ -1,0 +1,5299 @@
+{
+  "format_version": 1,
+  "executed_at": "2026-09-29T09:08:43.670642+00:00",
+  "environment": {
+    "os": "Windows 11",
+    "architecture": "AMD64",
+    "python": "3.12.12",
+    "postgresql": "17.11 (Debian 17.11-1.pgdg13+2)",
+    "cpu_count": 20,
+    "api_processes": 2,
+    "tool_processes": 1,
+    "packages": {
+      "fastapi": "0.141.1",
+      "sqlalchemy": "2.1.1",
+      "httpx": "0.28.1",
+      "psycopg": "3.3.6"
+    }
+  },
+  "scenarios": [
+    {
+      "scenario": "normal-paced",
+      "requests": 100,
+      "daily_limit": 100,
+      "max_inflight": 2,
+      "barrier_held": null,
+      "counts": {
+        "succeeded": 100
+      },
+      "admitted": 100,
+      "tool_started": 100,
+      "tool_peak": 2,
+      "end_inflight": 0,
+      "wall_seconds": 19.825,
+      "latency_ms": {
+        "p50": 344.802,
+        "p95": 465.199
+      },
+      "admission_ms": {
+        "p50": 30.605,
+        "p95": 79.993
+      },
+      "principal_lock_ms": {
+        "p50": 9.595,
+        "p95": 25.894
+      },
+      "tool_duration_ms": {
+        "p50": 219.0,
+        "p95": 265.0
+      },
+      "raw_requests": [
+        {
+          "request": 0,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 436.906,
+          "admission_ms": 68.992,
+          "principal_lock_ms": 19.424
+        },
+        {
+          "request": 1,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 465.199,
+          "admission_ms": 108.996,
+          "principal_lock_ms": 68.714
+        },
+        {
+          "request": 2,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 381.392,
+          "admission_ms": 56.29,
+          "principal_lock_ms": 11.187
+        },
+        {
+          "request": 3,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 358.2,
+          "admission_ms": 77.203,
+          "principal_lock_ms": 39.716
+        },
+        {
+          "request": 4,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 319.291,
+          "admission_ms": 16.883,
+          "principal_lock_ms": 4.466
+        },
+        {
+          "request": 5,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 303.037,
+          "admission_ms": 25.138,
+          "principal_lock_ms": 9.923
+        },
+        {
+          "request": 6,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 332.034,
+          "admission_ms": 44.996,
+          "principal_lock_ms": 26.865
+        },
+        {
+          "request": 7,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 310.702,
+          "admission_ms": 20.258,
+          "principal_lock_ms": 4.771
+        },
+        {
+          "request": 8,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 321.454,
+          "admission_ms": 27.483,
+          "principal_lock_ms": 7.471
+        },
+        {
+          "request": 9,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 320.085,
+          "admission_ms": 36.445,
+          "principal_lock_ms": 16.005
+        },
+        {
+          "request": 10,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 346.088,
+          "admission_ms": 23.05,
+          "principal_lock_ms": 6.081
+        },
+        {
+          "request": 11,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 321.824,
+          "admission_ms": 29.608,
+          "principal_lock_ms": 12.022
+        },
+        {
+          "request": 12,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 518.554,
+          "admission_ms": 79.993,
+          "principal_lock_ms": 8.52
+        },
+        {
+          "request": 13,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 515.683,
+          "admission_ms": 163.803,
+          "principal_lock_ms": 66.724
+        },
+        {
+          "request": 14,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 346.903,
+          "admission_ms": 27.386,
+          "principal_lock_ms": 6.584
+        },
+        {
+          "request": 15,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 345.236,
+          "admission_ms": 39.344,
+          "principal_lock_ms": 16.127
+        },
+        {
+          "request": 16,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 439.483,
+          "admission_ms": 29.961,
+          "principal_lock_ms": 5.254
+        },
+        {
+          "request": 17,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 402.926,
+          "admission_ms": 46.637,
+          "principal_lock_ms": 21.505
+        },
+        {
+          "request": 18,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 419.783,
+          "admission_ms": 41.274,
+          "principal_lock_ms": 12.825
+        },
+        {
+          "request": 19,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 411.036,
+          "admission_ms": 78.771,
+          "principal_lock_ms": 14.523
+        },
+        {
+          "request": 20,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 400.282,
+          "admission_ms": 43.505,
+          "principal_lock_ms": 15.014
+        },
+        {
+          "request": 21,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 366.226,
+          "admission_ms": 48.641,
+          "principal_lock_ms": 25.475
+        },
+        {
+          "request": 22,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 388.58,
+          "admission_ms": 40.358,
+          "principal_lock_ms": 12.763
+        },
+        {
+          "request": 23,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 393.513,
+          "admission_ms": 51.188,
+          "principal_lock_ms": 23.691
+        },
+        {
+          "request": 24,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 383.115,
+          "admission_ms": 66.3,
+          "principal_lock_ms": 17.359
+        },
+        {
+          "request": 25,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 443.555,
+          "admission_ms": 76.211,
+          "principal_lock_ms": 44.105
+        },
+        {
+          "request": 26,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 336.021,
+          "admission_ms": 25.506,
+          "principal_lock_ms": 7.27
+        },
+        {
+          "request": 27,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 311.974,
+          "admission_ms": 25.739,
+          "principal_lock_ms": 6.581
+        },
+        {
+          "request": 28,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 368.87,
+          "admission_ms": 29.963,
+          "principal_lock_ms": 7.736
+        },
+        {
+          "request": 29,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 466.269,
+          "admission_ms": 94.598,
+          "principal_lock_ms": 6.933
+        },
+        {
+          "request": 30,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 352.86,
+          "admission_ms": 37.661,
+          "principal_lock_ms": 11.219
+        },
+        {
+          "request": 31,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 335.815,
+          "admission_ms": 34.606,
+          "principal_lock_ms": 8.525
+        },
+        {
+          "request": 32,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 342.596,
+          "admission_ms": 22.345,
+          "principal_lock_ms": 5.291
+        },
+        {
+          "request": 33,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 416.086,
+          "admission_ms": 26.333,
+          "principal_lock_ms": 5.756
+        },
+        {
+          "request": 34,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 438.638,
+          "admission_ms": 124.795,
+          "principal_lock_ms": 18.781
+        },
+        {
+          "request": 35,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 310.948,
+          "admission_ms": 35.015,
+          "principal_lock_ms": 8.29
+        },
+        {
+          "request": 36,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 300.036,
+          "admission_ms": 20.638,
+          "principal_lock_ms": 4.472
+        },
+        {
+          "request": 37,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 296.387,
+          "admission_ms": 27.128,
+          "principal_lock_ms": 7.832
+        },
+        {
+          "request": 38,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 301.673,
+          "admission_ms": 19.284,
+          "principal_lock_ms": 4.484
+        },
+        {
+          "request": 39,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 299.943,
+          "admission_ms": 20.635,
+          "principal_lock_ms": 6.513
+        },
+        {
+          "request": 40,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 279.878,
+          "admission_ms": 16.264,
+          "principal_lock_ms": 5.632
+        },
+        {
+          "request": 41,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 316.432,
+          "admission_ms": 20.577,
+          "principal_lock_ms": 6.643
+        },
+        {
+          "request": 42,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 334.753,
+          "admission_ms": 19.815,
+          "principal_lock_ms": 5.684
+        },
+        {
+          "request": 43,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 305.042,
+          "admission_ms": 37.621,
+          "principal_lock_ms": 11.305
+        },
+        {
+          "request": 44,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 290.379,
+          "admission_ms": 21.984,
+          "principal_lock_ms": 5.59
+        },
+        {
+          "request": 45,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 277.922,
+          "admission_ms": 21.4,
+          "principal_lock_ms": 5.758
+        },
+        {
+          "request": 46,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 355.845,
+          "admission_ms": 17.429,
+          "principal_lock_ms": 5.244
+        },
+        {
+          "request": 47,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 293.585,
+          "admission_ms": 17.824,
+          "principal_lock_ms": 5.107
+        },
+        {
+          "request": 48,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 328.886,
+          "admission_ms": 27.802,
+          "principal_lock_ms": 7.267
+        },
+        {
+          "request": 49,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 318.103,
+          "admission_ms": 29.939,
+          "principal_lock_ms": 9.032
+        },
+        {
+          "request": 50,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 335.071,
+          "admission_ms": 17.952,
+          "principal_lock_ms": 4.821
+        },
+        {
+          "request": 51,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 337.169,
+          "admission_ms": 28.683,
+          "principal_lock_ms": 10.871
+        },
+        {
+          "request": 52,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 314.911,
+          "admission_ms": 20.31,
+          "principal_lock_ms": 5.564
+        },
+        {
+          "request": 53,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 314.775,
+          "admission_ms": 28.385,
+          "principal_lock_ms": 11.274
+        },
+        {
+          "request": 54,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 337.864,
+          "admission_ms": 20.4,
+          "principal_lock_ms": 6.404
+        },
+        {
+          "request": 55,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 338.852,
+          "admission_ms": 26.194,
+          "principal_lock_ms": 11.019
+        },
+        {
+          "request": 56,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 350.556,
+          "admission_ms": 26.528,
+          "principal_lock_ms": 7.262
+        },
+        {
+          "request": 57,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 329.738,
+          "admission_ms": 34.439,
+          "principal_lock_ms": 16.804
+        },
+        {
+          "request": 58,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 360.219,
+          "admission_ms": 27.211,
+          "principal_lock_ms": 6.764
+        },
+        {
+          "request": 59,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 342.301,
+          "admission_ms": 49.066,
+          "principal_lock_ms": 20.197
+        },
+        {
+          "request": 60,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 351.429,
+          "admission_ms": 22.439,
+          "principal_lock_ms": 5.431
+        },
+        {
+          "request": 61,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 330.678,
+          "admission_ms": 33.49,
+          "principal_lock_ms": 14.797
+        },
+        {
+          "request": 62,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 344.307,
+          "admission_ms": 31.455,
+          "principal_lock_ms": 8.39
+        },
+        {
+          "request": 63,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 342.255,
+          "admission_ms": 35.544,
+          "principal_lock_ms": 15.948
+        },
+        {
+          "request": 64,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 424.247,
+          "admission_ms": 36.297,
+          "principal_lock_ms": 15.306
+        },
+        {
+          "request": 65,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 424.591,
+          "admission_ms": 47.352,
+          "principal_lock_ms": 24.904
+        },
+        {
+          "request": 66,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 360.394,
+          "admission_ms": 32.72,
+          "principal_lock_ms": 7.889
+        },
+        {
+          "request": 67,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 358.688,
+          "admission_ms": 46.043,
+          "principal_lock_ms": 20.99
+        },
+        {
+          "request": 68,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 355.927,
+          "admission_ms": 25.787,
+          "principal_lock_ms": 7.638
+        },
+        {
+          "request": 69,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 329.623,
+          "admission_ms": 33.954,
+          "principal_lock_ms": 16.9
+        },
+        {
+          "request": 70,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 362.555,
+          "admission_ms": 29.877,
+          "principal_lock_ms": 8.016
+        },
+        {
+          "request": 71,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 356.809,
+          "admission_ms": 66.219,
+          "principal_lock_ms": 16.71
+        },
+        {
+          "request": 72,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 319.531,
+          "admission_ms": 26.03,
+          "principal_lock_ms": 7.066
+        },
+        {
+          "request": 73,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 321.043,
+          "admission_ms": 32.913,
+          "principal_lock_ms": 14.259
+        },
+        {
+          "request": 74,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 338.848,
+          "admission_ms": 27.72,
+          "principal_lock_ms": 7.78
+        },
+        {
+          "request": 75,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 334.681,
+          "admission_ms": 37.357,
+          "principal_lock_ms": 16.764
+        },
+        {
+          "request": 76,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 350.635,
+          "admission_ms": 19.365,
+          "principal_lock_ms": 4.49
+        },
+        {
+          "request": 77,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 317.654,
+          "admission_ms": 33.563,
+          "principal_lock_ms": 11.021
+        },
+        {
+          "request": 78,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 332.72,
+          "admission_ms": 42.15,
+          "principal_lock_ms": 18.85
+        },
+        {
+          "request": 79,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 317.123,
+          "admission_ms": 39.375,
+          "principal_lock_ms": 16.224
+        },
+        {
+          "request": 80,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 381.799,
+          "admission_ms": 25.79,
+          "principal_lock_ms": 6.581
+        },
+        {
+          "request": 81,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 351.451,
+          "admission_ms": 35.125,
+          "principal_lock_ms": 16.396
+        },
+        {
+          "request": 82,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 481.24,
+          "admission_ms": 47.08,
+          "principal_lock_ms": 13.419
+        },
+        {
+          "request": 83,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 476.742,
+          "admission_ms": 61.778,
+          "principal_lock_ms": 25.894
+        },
+        {
+          "request": 84,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 355.662,
+          "admission_ms": 34.252,
+          "principal_lock_ms": 9.595
+        },
+        {
+          "request": 85,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 350.489,
+          "admission_ms": 43.031,
+          "principal_lock_ms": 17.86
+        },
+        {
+          "request": 86,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 382.669,
+          "admission_ms": 28.948,
+          "principal_lock_ms": 7.034
+        },
+        {
+          "request": 87,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 360.331,
+          "admission_ms": 46.127,
+          "principal_lock_ms": 18.796
+        },
+        {
+          "request": 88,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 348.423,
+          "admission_ms": 25.291,
+          "principal_lock_ms": 5.979
+        },
+        {
+          "request": 89,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 347.741,
+          "admission_ms": 35.129,
+          "principal_lock_ms": 12.767
+        },
+        {
+          "request": 90,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 398.901,
+          "admission_ms": 25.177,
+          "principal_lock_ms": 6.683
+        },
+        {
+          "request": 91,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 399.075,
+          "admission_ms": 83.498,
+          "principal_lock_ms": 14.631
+        },
+        {
+          "request": 92,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 322.493,
+          "admission_ms": 22.766,
+          "principal_lock_ms": 6.866
+        },
+        {
+          "request": 93,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 319.921,
+          "admission_ms": 29.877,
+          "principal_lock_ms": 11.338
+        },
+        {
+          "request": 94,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 332.7,
+          "admission_ms": 21.936,
+          "principal_lock_ms": 5.262
+        },
+        {
+          "request": 95,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 333.787,
+          "admission_ms": 28.501,
+          "principal_lock_ms": 13.198
+        },
+        {
+          "request": 96,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 379.856,
+          "admission_ms": 30.605,
+          "principal_lock_ms": 6.381
+        },
+        {
+          "request": 97,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 381.57,
+          "admission_ms": 49.373,
+          "principal_lock_ms": 19.86
+        },
+        {
+          "request": 98,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 344.24,
+          "admission_ms": 27.138,
+          "principal_lock_ms": 7.294
+        },
+        {
+          "request": 99,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 344.802,
+          "admission_ms": 38.764,
+          "principal_lock_ms": 16.614
+        }
+      ],
+      "tool_journal": [
+        {
+          "operation_id": "3a442302-defb-46a6-9638-94634892f4c0",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:53.743160+00:00",
+          "completed_at": "2026-09-29T09:07:53.925406+00:00",
+          "wall_duration_ms": 182.246,
+          "start_monotonic_ns": 30781703000000,
+          "terminal_monotonic_ns": 30781921000000,
+          "duration_ms": 218.0
+        },
+        {
+          "operation_id": "a51aaecf-990f-4256-9fb8-6fb208cc2239",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:53.763281+00:00",
+          "completed_at": "2026-09-29T09:07:53.946291+00:00",
+          "wall_duration_ms": 183.01,
+          "start_monotonic_ns": 30781718000000,
+          "terminal_monotonic_ns": 30781937000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "878e8301-b682-4259-998c-2eb99b9de4fc",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:54.677327+00:00",
+          "completed_at": "2026-09-29T09:07:54.864700+00:00",
+          "wall_duration_ms": 187.373,
+          "start_monotonic_ns": 30782718000000,
+          "terminal_monotonic_ns": 30782937000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "624528ac-3854-4750-be9b-1b6c2b7db0ca",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:54.105884+00:00",
+          "completed_at": "2026-09-29T09:07:54.302467+00:00",
+          "wall_duration_ms": 196.583,
+          "start_monotonic_ns": 30782093000000,
+          "terminal_monotonic_ns": 30782312000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "455289f6-c007-40e4-9e70-334375099a65",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:54.118848+00:00",
+          "completed_at": "2026-09-29T09:07:54.304384+00:00",
+          "wall_duration_ms": 185.536,
+          "start_monotonic_ns": 30782109000000,
+          "terminal_monotonic_ns": 30782328000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "7bf2cef2-1ea5-47a4-9ba3-24ec933d68a1",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:54.685273+00:00",
+          "completed_at": "2026-09-29T09:07:54.865984+00:00",
+          "wall_duration_ms": 180.711,
+          "start_monotonic_ns": 30782734000000,
+          "terminal_monotonic_ns": 30782937000000,
+          "duration_ms": 203.0
+        },
+        {
+          "operation_id": "7f968d07-77a7-40eb-9e43-39ff950a1b48",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:54.392206+00:00",
+          "completed_at": "2026-09-29T09:07:54.584093+00:00",
+          "wall_duration_ms": 191.887,
+          "start_monotonic_ns": 30782406000000,
+          "terminal_monotonic_ns": 30782625000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "38858b17-fecf-4a48-a9a3-ae4cf00458b6",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:54.381684+00:00",
+          "completed_at": "2026-09-29T09:07:54.583730+00:00",
+          "wall_duration_ms": 202.046,
+          "start_monotonic_ns": 30782406000000,
+          "terminal_monotonic_ns": 30782625000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "b99b83fc-8949-4ef9-9fe0-db587897222f",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:54.976465+00:00",
+          "completed_at": "2026-09-29T09:07:55.160616+00:00",
+          "wall_duration_ms": 184.151,
+          "start_monotonic_ns": 30783046000000,
+          "terminal_monotonic_ns": 30783265000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "eece94b6-af04-4c16-8d4a-3f56de145be6",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:54.985768+00:00",
+          "completed_at": "2026-09-29T09:07:55.166305+00:00",
+          "wall_duration_ms": 180.537,
+          "start_monotonic_ns": 30783062000000,
+          "terminal_monotonic_ns": 30783265000000,
+          "duration_ms": 203.0
+        },
+        {
+          "operation_id": "fc6d4e20-c5ce-4c12-9044-679b6f497d3f",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:55.267591+00:00",
+          "completed_at": "2026-09-29T09:07:55.452195+00:00",
+          "wall_duration_ms": 184.604,
+          "start_monotonic_ns": 30783359000000,
+          "terminal_monotonic_ns": 30783578000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "8237a497-6581-411d-9642-3448c9fa2e87",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:55.259095+00:00",
+          "completed_at": "2026-09-29T09:07:55.438447+00:00",
+          "wall_duration_ms": 179.352,
+          "start_monotonic_ns": 30783359000000,
+          "terminal_monotonic_ns": 30783578000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "d7e6d40a-0804-4f77-a0b6-1c0464399fd8",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:55.746999+00:00",
+          "completed_at": "2026-09-29T09:07:55.929804+00:00",
+          "wall_duration_ms": 182.805,
+          "start_monotonic_ns": 30783890000000,
+          "terminal_monotonic_ns": 30784109000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "311b3d96-81ec-4fee-852d-6e8b0bf5e980",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:55.727705+00:00",
+          "completed_at": "2026-09-29T09:07:55.928707+00:00",
+          "wall_duration_ms": 201.002,
+          "start_monotonic_ns": 30783875000000,
+          "terminal_monotonic_ns": 30784109000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "d8065934-4c9e-4006-99d2-a635738ca2a0",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:56.067193+00:00",
+          "completed_at": "2026-09-29T09:07:56.255809+00:00",
+          "wall_duration_ms": 188.616,
+          "start_monotonic_ns": 30784234000000,
+          "terminal_monotonic_ns": 30784453000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "64ea57f0-9f33-478e-9b56-40c6cb266dcf",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:56.387290+00:00",
+          "completed_at": "2026-09-29T09:07:56.579511+00:00",
+          "wall_duration_ms": 192.221,
+          "start_monotonic_ns": 30784593000000,
+          "terminal_monotonic_ns": 30784843000000,
+          "duration_ms": 250.0
+        },
+        {
+          "operation_id": "80030ea9-8e6c-45e0-a504-ef6dca3a9511",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:56.054814+00:00",
+          "completed_at": "2026-09-29T09:07:56.254459+00:00",
+          "wall_duration_ms": 199.645,
+          "start_monotonic_ns": 30784218000000,
+          "terminal_monotonic_ns": 30784453000000,
+          "duration_ms": 235.0
+        },
+        {
+          "operation_id": "2dcbbd1f-e39c-44ae-b94f-654b3058d89f",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:57.172937+00:00",
+          "completed_at": "2026-09-29T09:07:57.367668+00:00",
+          "wall_duration_ms": 194.731,
+          "start_monotonic_ns": 30785453000000,
+          "terminal_monotonic_ns": 30785656000000,
+          "duration_ms": 203.0
+        },
+        {
+          "operation_id": "3ca1e9fb-58c9-4bb3-bd41-00d7ee45f757",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:57.158245+00:00",
+          "completed_at": "2026-09-29T09:07:57.366286+00:00",
+          "wall_duration_ms": 208.041,
+          "start_monotonic_ns": 30785437000000,
+          "terminal_monotonic_ns": 30785671000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "416c3810-614b-440c-be5d-faf66306ca7e",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:56.375728+00:00",
+          "completed_at": "2026-09-29T09:07:56.578425+00:00",
+          "wall_duration_ms": 202.697,
+          "start_monotonic_ns": 30784578000000,
+          "terminal_monotonic_ns": 30784843000000,
+          "duration_ms": 265.0
+        },
+        {
+          "operation_id": "7cb5b87c-611f-437f-8da2-2eb446eb9b1b",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:56.808142+00:00",
+          "completed_at": "2026-09-29T09:07:57.004417+00:00",
+          "wall_duration_ms": 196.275,
+          "start_monotonic_ns": 30785046000000,
+          "terminal_monotonic_ns": 30785281000000,
+          "duration_ms": 235.0
+        },
+        {
+          "operation_id": "b61762a8-8039-4f8a-ae9e-613fdbaadda0",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:56.820102+00:00",
+          "completed_at": "2026-09-29T09:07:57.005314+00:00",
+          "wall_duration_ms": 185.212,
+          "start_monotonic_ns": 30785062000000,
+          "terminal_monotonic_ns": 30785281000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "70ae5799-02d8-4a69-a8a4-4ff027c6ac7a",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:57.528801+00:00",
+          "completed_at": "2026-09-29T09:07:57.748872+00:00",
+          "wall_duration_ms": 220.071,
+          "start_monotonic_ns": 30785812000000,
+          "terminal_monotonic_ns": 30786046000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "c39d68ed-ab95-4482-865e-d88be0a106f8",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:57.539018+00:00",
+          "completed_at": "2026-09-29T09:07:57.747364+00:00",
+          "wall_duration_ms": 208.346,
+          "start_monotonic_ns": 30785812000000,
+          "terminal_monotonic_ns": 30786046000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "515a60bb-9f65-43ed-8fef-96a1db95e2f5",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:57.954627+00:00",
+          "completed_at": "2026-09-29T09:07:58.161430+00:00",
+          "wall_duration_ms": 206.803,
+          "start_monotonic_ns": 30786234000000,
+          "terminal_monotonic_ns": 30786453000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "2ad1e01e-d74d-4a45-9019-46854977b9d6",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:58.346854+00:00",
+          "completed_at": "2026-09-29T09:07:58.556623+00:00",
+          "wall_duration_ms": 209.769,
+          "start_monotonic_ns": 30786625000000,
+          "terminal_monotonic_ns": 30786843000000,
+          "duration_ms": 218.0
+        },
+        {
+          "operation_id": "576f941e-caaa-4e6a-b81c-3ba37adf4ec6",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:57.972805+00:00",
+          "completed_at": "2026-09-29T09:07:58.235748+00:00",
+          "wall_duration_ms": 262.943,
+          "start_monotonic_ns": 30786296000000,
+          "terminal_monotonic_ns": 30786531000000,
+          "duration_ms": 235.0
+        },
+        {
+          "operation_id": "6da7a795-c6b2-4e2c-b086-9adc34f7bc10",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:58.266509+00:00",
+          "completed_at": "2026-09-29T09:07:58.488392+00:00",
+          "wall_duration_ms": 221.883,
+          "start_monotonic_ns": 30786546000000,
+          "terminal_monotonic_ns": 30786781000000,
+          "duration_ms": 235.0
+        },
+        {
+          "operation_id": "f6f4ea05-4a39-4cba-9494-946e46991be6",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:58.609040+00:00",
+          "completed_at": "2026-09-29T09:07:58.833636+00:00",
+          "wall_duration_ms": 224.596,
+          "start_monotonic_ns": 30786890000000,
+          "terminal_monotonic_ns": 30787140000000,
+          "duration_ms": 250.0
+        },
+        {
+          "operation_id": "10105ca1-be1c-4657-a802-8f6d5456515a",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:58.995179+00:00",
+          "completed_at": "2026-09-29T09:07:59.205604+00:00",
+          "wall_duration_ms": 210.425,
+          "start_monotonic_ns": 30787281000000,
+          "terminal_monotonic_ns": 30787500000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "77e45ca1-e0c7-4a1a-ac6f-b7e111b3ef9f",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:00.984131+00:00",
+          "completed_at": "2026-09-29T09:08:01.225864+00:00",
+          "wall_duration_ms": 241.733,
+          "start_monotonic_ns": 30789265000000,
+          "terminal_monotonic_ns": 30789515000000,
+          "duration_ms": 250.0
+        },
+        {
+          "operation_id": "87d065ac-8e34-48a7-80a7-10f868b8d858",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:59.316146+00:00",
+          "completed_at": "2026-09-29T09:07:59.527871+00:00",
+          "wall_duration_ms": 211.725,
+          "start_monotonic_ns": 30787593000000,
+          "terminal_monotonic_ns": 30787828000000,
+          "duration_ms": 235.0
+        },
+        {
+          "operation_id": "66810c3a-7550-433b-921f-b0590d95b8e2",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:59.794031+00:00",
+          "completed_at": "2026-09-29T09:08:00.010743+00:00",
+          "wall_duration_ms": 216.712,
+          "start_monotonic_ns": 30788078000000,
+          "terminal_monotonic_ns": 30788296000000,
+          "duration_ms": 218.0
+        },
+        {
+          "operation_id": "5b9e0ca9-05ed-45f0-8640-51ff6a387f71",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:00.093770+00:00",
+          "completed_at": "2026-09-29T09:08:00.300954+00:00",
+          "wall_duration_ms": 207.184,
+          "start_monotonic_ns": 30788375000000,
+          "terminal_monotonic_ns": 30788593000000,
+          "duration_ms": 218.0
+        },
+        {
+          "operation_id": "76457f39-07ab-4fd3-b7b8-df574cf9b49d",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:01.314116+00:00",
+          "completed_at": "2026-09-29T09:08:01.519896+00:00",
+          "wall_duration_ms": 205.78,
+          "start_monotonic_ns": 30789593000000,
+          "terminal_monotonic_ns": 30789812000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "83b8d69e-c4fd-419d-ae04-315a59602d51",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:00.392993+00:00",
+          "completed_at": "2026-09-29T09:08:00.590180+00:00",
+          "wall_duration_ms": 197.187,
+          "start_monotonic_ns": 30788671000000,
+          "terminal_monotonic_ns": 30788890000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "3bd8c4ab-3f53-4ff0-b446-55a687e584f0",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:00.692763+00:00",
+          "completed_at": "2026-09-29T09:08:00.885349+00:00",
+          "wall_duration_ms": 192.586,
+          "start_monotonic_ns": 30788968000000,
+          "terminal_monotonic_ns": 30789171000000,
+          "duration_ms": 203.0
+        },
+        {
+          "operation_id": "efb27a44-8159-4422-a57d-dabf74eea7e3",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:01.986364+00:00",
+          "completed_at": "2026-09-29T09:08:02.205559+00:00",
+          "wall_duration_ms": 219.195,
+          "start_monotonic_ns": 30790265000000,
+          "terminal_monotonic_ns": 30790484000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "1030edf7-76de-4898-9165-9c049acc4866",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:01.595277+00:00",
+          "completed_at": "2026-09-29T09:08:01.832830+00:00",
+          "wall_duration_ms": 237.553,
+          "start_monotonic_ns": 30789875000000,
+          "terminal_monotonic_ns": 30790140000000,
+          "duration_ms": 265.0
+        },
+        {
+          "operation_id": "0cc007bb-53ac-4289-a2bf-9809c69ce61c",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:02.293075+00:00",
+          "completed_at": "2026-09-29T09:08:02.492630+00:00",
+          "wall_duration_ms": 199.555,
+          "start_monotonic_ns": 30790562000000,
+          "terminal_monotonic_ns": 30790796000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "09419ca6-9aed-49e0-b33a-a1f2976a0407",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:02.630518+00:00",
+          "completed_at": "2026-09-29T09:08:02.843311+00:00",
+          "wall_duration_ms": 212.793,
+          "start_monotonic_ns": 30790906000000,
+          "terminal_monotonic_ns": 30791140000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "1f4e0de8-8142-45a4-8558-929ed2006edb",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:58.773898+00:00",
+          "completed_at": "2026-09-29T09:07:58.993735+00:00",
+          "wall_duration_ms": 219.837,
+          "start_monotonic_ns": 30787046000000,
+          "terminal_monotonic_ns": 30787296000000,
+          "duration_ms": 250.0
+        },
+        {
+          "operation_id": "1fbcc368-d014-4d4c-ad4e-febf4b1ace1b",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:01.120156+00:00",
+          "completed_at": "2026-09-29T09:08:01.313632+00:00",
+          "wall_duration_ms": 193.476,
+          "start_monotonic_ns": 30789390000000,
+          "terminal_monotonic_ns": 30789609000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "cefe056c-9ce8-47fa-acb3-00ff11101f73",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:59.144308+00:00",
+          "completed_at": "2026-09-29T09:07:59.356393+00:00",
+          "wall_duration_ms": 212.085,
+          "start_monotonic_ns": 30787421000000,
+          "terminal_monotonic_ns": 30787640000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "5b385f01-a0b8-43cc-a054-77137d91be36",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:59.470402+00:00",
+          "completed_at": "2026-09-29T09:07:59.702951+00:00",
+          "wall_duration_ms": 232.549,
+          "start_monotonic_ns": 30787750000000,
+          "terminal_monotonic_ns": 30788046000000,
+          "duration_ms": 296.0
+        },
+        {
+          "operation_id": "010e732e-28ee-42ac-a4ec-6f21d73f20db",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:07:59.903440+00:00",
+          "completed_at": "2026-09-29T09:08:00.101298+00:00",
+          "wall_duration_ms": 197.858,
+          "start_monotonic_ns": 30788171000000,
+          "terminal_monotonic_ns": 30788390000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "fa058df2-cbb4-490e-8dff-70a2db3f14aa",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:01.405219+00:00",
+          "completed_at": "2026-09-29T09:08:01.598016+00:00",
+          "wall_duration_ms": 192.797,
+          "start_monotonic_ns": 30789687000000,
+          "terminal_monotonic_ns": 30789890000000,
+          "duration_ms": 203.0
+        },
+        {
+          "operation_id": "da687d10-9bdc-4070-b87c-2e64b9879c70",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:00.200666+00:00",
+          "completed_at": "2026-09-29T09:08:00.396746+00:00",
+          "wall_duration_ms": 196.08,
+          "start_monotonic_ns": 30788484000000,
+          "terminal_monotonic_ns": 30788687000000,
+          "duration_ms": 203.0
+        },
+        {
+          "operation_id": "b5793753-069e-4f73-b399-7ba46e6e15a6",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:00.479326+00:00",
+          "completed_at": "2026-09-29T09:08:00.691370+00:00",
+          "wall_duration_ms": 212.044,
+          "start_monotonic_ns": 30788750000000,
+          "terminal_monotonic_ns": 30788984000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "774a58d0-3c18-42df-9a39-c8d39c2b44cc",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:00.776927+00:00",
+          "completed_at": "2026-09-29T09:08:00.980782+00:00",
+          "wall_duration_ms": 203.855,
+          "start_monotonic_ns": 30789046000000,
+          "terminal_monotonic_ns": 30789281000000,
+          "duration_ms": 235.0
+        },
+        {
+          "operation_id": "83d5843b-4e8a-436c-b817-3eb72f9ddb65",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:02.301136+00:00",
+          "completed_at": "2026-09-29T09:08:02.493405+00:00",
+          "wall_duration_ms": 192.269,
+          "start_monotonic_ns": 30790578000000,
+          "terminal_monotonic_ns": 30790812000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "b4a426b1-a78f-412b-8bfa-8c59aa70431f",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:01.674578+00:00",
+          "completed_at": "2026-09-29T09:08:01.867511+00:00",
+          "wall_duration_ms": 192.933,
+          "start_monotonic_ns": 30789953000000,
+          "terminal_monotonic_ns": 30790156000000,
+          "duration_ms": 203.0
+        },
+        {
+          "operation_id": "83989cad-b218-4277-981f-a76cfd71d7f0",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:01.997882+00:00",
+          "completed_at": "2026-09-29T09:08:02.206165+00:00",
+          "wall_duration_ms": 208.283,
+          "start_monotonic_ns": 30790281000000,
+          "terminal_monotonic_ns": 30790484000000,
+          "duration_ms": 203.0
+        },
+        {
+          "operation_id": "bcd0f2ac-58e3-4bd7-b2ca-701ac511ca65",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:02.638401+00:00",
+          "completed_at": "2026-09-29T09:08:02.842486+00:00",
+          "wall_duration_ms": 204.085,
+          "start_monotonic_ns": 30790921000000,
+          "terminal_monotonic_ns": 30791140000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "fc2ea6b9-85c7-40ab-b0dc-2d326bb395d3",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:02.955358+00:00",
+          "completed_at": "2026-09-29T09:08:03.158849+00:00",
+          "wall_duration_ms": 203.491,
+          "start_monotonic_ns": 30791234000000,
+          "terminal_monotonic_ns": 30791453000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "780b4a3a-4dac-4c78-807f-af1d06e695ef",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:02.945220+00:00",
+          "completed_at": "2026-09-29T09:08:03.158327+00:00",
+          "wall_duration_ms": 213.107,
+          "start_monotonic_ns": 30791218000000,
+          "terminal_monotonic_ns": 30791453000000,
+          "duration_ms": 235.0
+        },
+        {
+          "operation_id": "decf125a-a3ec-44db-936d-560972cba571",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:03.291246+00:00",
+          "completed_at": "2026-09-29T09:08:03.515086+00:00",
+          "wall_duration_ms": 223.84,
+          "start_monotonic_ns": 30791562000000,
+          "terminal_monotonic_ns": 30791812000000,
+          "duration_ms": 250.0
+        },
+        {
+          "operation_id": "5036a8f4-d117-4e38-9cb7-9921f048cc55",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:03.661297+00:00",
+          "completed_at": "2026-09-29T09:08:03.879465+00:00",
+          "wall_duration_ms": 218.168,
+          "start_monotonic_ns": 30791937000000,
+          "terminal_monotonic_ns": 30792171000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "6adaeaa3-96fc-4d3d-93aa-39c25d387e86",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:05.841205+00:00",
+          "completed_at": "2026-09-29T09:08:06.052360+00:00",
+          "wall_duration_ms": 211.155,
+          "start_monotonic_ns": 30794125000000,
+          "terminal_monotonic_ns": 30794343000000,
+          "duration_ms": 218.0
+        },
+        {
+          "operation_id": "42407604-a4ad-4ae4-952a-062042429b80",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:03.983073+00:00",
+          "completed_at": "2026-09-29T09:08:04.202769+00:00",
+          "wall_duration_ms": 219.696,
+          "start_monotonic_ns": 30792265000000,
+          "terminal_monotonic_ns": 30792500000000,
+          "duration_ms": 235.0
+        },
+        {
+          "operation_id": "bda1f816-8305-4494-8bff-089469a81785",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:04.333704+00:00",
+          "completed_at": "2026-09-29T09:08:04.539634+00:00",
+          "wall_duration_ms": 205.93,
+          "start_monotonic_ns": 30792609000000,
+          "terminal_monotonic_ns": 30792828000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "c78573f2-e759-4b09-881e-23bd7ac62e03",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:07.476878+00:00",
+          "completed_at": "2026-09-29T09:08:07.687486+00:00",
+          "wall_duration_ms": 210.608,
+          "start_monotonic_ns": 30795750000000,
+          "terminal_monotonic_ns": 30795984000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "b46ddd93-e7e0-4e83-83ae-e700e080858b",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:04.688450+00:00",
+          "completed_at": "2026-09-29T09:08:04.923542+00:00",
+          "wall_duration_ms": 235.092,
+          "start_monotonic_ns": 30792968000000,
+          "terminal_monotonic_ns": 30793265000000,
+          "duration_ms": 297.0
+        },
+        {
+          "operation_id": "a7b74555-114a-4276-848b-b0883eb2c023",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:06.157166+00:00",
+          "completed_at": "2026-09-29T09:08:06.361464+00:00",
+          "wall_duration_ms": 204.298,
+          "start_monotonic_ns": 30794437000000,
+          "terminal_monotonic_ns": 30794640000000,
+          "duration_ms": 203.0
+        },
+        {
+          "operation_id": "a571a194-dcba-4999-84db-6c0fbc028cef",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:05.109805+00:00",
+          "completed_at": "2026-09-29T09:08:05.336243+00:00",
+          "wall_duration_ms": 226.438,
+          "start_monotonic_ns": 30793390000000,
+          "terminal_monotonic_ns": 30793625000000,
+          "duration_ms": 235.0
+        },
+        {
+          "operation_id": "0798084b-1abe-403d-96cb-16924b319f1f",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:05.450931+00:00",
+          "completed_at": "2026-09-29T09:08:05.660960+00:00",
+          "wall_duration_ms": 210.029,
+          "start_monotonic_ns": 30793734000000,
+          "terminal_monotonic_ns": 30793953000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "de7f2a24-4eba-48fd-89d2-eb5667fcc59d",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:06.811803+00:00",
+          "completed_at": "2026-09-29T09:08:07.025344+00:00",
+          "wall_duration_ms": 213.541,
+          "start_monotonic_ns": 30795093000000,
+          "terminal_monotonic_ns": 30795312000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "fe539fd8-3713-4ba0-9236-0f4028c5fea3",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:06.481874+00:00",
+          "completed_at": "2026-09-29T09:08:06.703201+00:00",
+          "wall_duration_ms": 221.327,
+          "start_monotonic_ns": 30794765000000,
+          "terminal_monotonic_ns": 30794984000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "9ab95fe8-0a65-4f83-9152-7956ffd2fa69",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:07.164358+00:00",
+          "completed_at": "2026-09-29T09:08:07.368556+00:00",
+          "wall_duration_ms": 204.198,
+          "start_monotonic_ns": 30795437000000,
+          "terminal_monotonic_ns": 30795656000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "532557b0-7372-4481-b368-58205e9426bb",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:03.302054+00:00",
+          "completed_at": "2026-09-29T09:08:03.515323+00:00",
+          "wall_duration_ms": 213.269,
+          "start_monotonic_ns": 30791578000000,
+          "terminal_monotonic_ns": 30791812000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "b1683758-b746-4a55-a6d4-0cc49ce2e823",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:03.674936+00:00",
+          "completed_at": "2026-09-29T09:08:03.879732+00:00",
+          "wall_duration_ms": 204.796,
+          "start_monotonic_ns": 30791953000000,
+          "terminal_monotonic_ns": 30792171000000,
+          "duration_ms": 218.0
+        },
+        {
+          "operation_id": "da636d55-f209-41b1-ad07-d5ed07d1001d",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:03.995330+00:00",
+          "completed_at": "2026-09-29T09:08:04.202168+00:00",
+          "wall_duration_ms": 206.838,
+          "start_monotonic_ns": 30792265000000,
+          "terminal_monotonic_ns": 30792500000000,
+          "duration_ms": 235.0
+        },
+        {
+          "operation_id": "92b29837-2805-4995-8e0d-37112ec18c99",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:06.169692+00:00",
+          "completed_at": "2026-09-29T09:08:06.364978+00:00",
+          "wall_duration_ms": 195.286,
+          "start_monotonic_ns": 30794453000000,
+          "terminal_monotonic_ns": 30794656000000,
+          "duration_ms": 203.0
+        },
+        {
+          "operation_id": "d3648c06-417b-4cd9-beca-0866d373fa17",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:04.346714+00:00",
+          "completed_at": "2026-09-29T09:08:04.539756+00:00",
+          "wall_duration_ms": 193.042,
+          "start_monotonic_ns": 30792625000000,
+          "terminal_monotonic_ns": 30792828000000,
+          "duration_ms": 203.0
+        },
+        {
+          "operation_id": "4165a457-675f-42ff-a06c-6029fbce7f6f",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:04.702509+00:00",
+          "completed_at": "2026-09-29T09:08:04.934014+00:00",
+          "wall_duration_ms": 231.505,
+          "start_monotonic_ns": 30792984000000,
+          "terminal_monotonic_ns": 30793265000000,
+          "duration_ms": 281.0
+        },
+        {
+          "operation_id": "c4869fa7-7bdd-406d-a04c-6c6c3d1fa16b",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:07.487772+00:00",
+          "completed_at": "2026-09-29T09:08:07.688104+00:00",
+          "wall_duration_ms": 200.332,
+          "start_monotonic_ns": 30795765000000,
+          "terminal_monotonic_ns": 30795984000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "d538d6f1-1b4b-429d-90af-f537b6119b12",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:05.123834+00:00",
+          "completed_at": "2026-09-29T09:08:05.336634+00:00",
+          "wall_duration_ms": 212.8,
+          "start_monotonic_ns": 30793406000000,
+          "terminal_monotonic_ns": 30793625000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "49df5286-b9df-4a4c-a50d-235e214a6870",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:06.495700+00:00",
+          "completed_at": "2026-09-29T09:08:06.703771+00:00",
+          "wall_duration_ms": 208.071,
+          "start_monotonic_ns": 30794781000000,
+          "terminal_monotonic_ns": 30795000000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "8a2ae35f-d3d7-46d3-be67-6aa8c976539b",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:05.463895+00:00",
+          "completed_at": "2026-09-29T09:08:05.660240+00:00",
+          "wall_duration_ms": 196.345,
+          "start_monotonic_ns": 30793734000000,
+          "terminal_monotonic_ns": 30793953000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "35441a3a-fe90-4344-8b08-1fa1af1a7dcf",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:05.853932+00:00",
+          "completed_at": "2026-09-29T09:08:06.053941+00:00",
+          "wall_duration_ms": 200.009,
+          "start_monotonic_ns": 30794140000000,
+          "terminal_monotonic_ns": 30794343000000,
+          "duration_ms": 203.0
+        },
+        {
+          "operation_id": "de797d67-fc53-460d-a5ec-1a4793efda1b",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:06.822840+00:00",
+          "completed_at": "2026-09-29T09:08:07.024986+00:00",
+          "wall_duration_ms": 202.146,
+          "start_monotonic_ns": 30795093000000,
+          "terminal_monotonic_ns": 30795312000000,
+          "duration_ms": 219.0
+        },
+        {
+          "operation_id": "24604273-4b31-4719-9bb4-ea8812a058e7",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:07.899558+00:00",
+          "completed_at": "2026-09-29T09:08:08.149786+00:00",
+          "wall_duration_ms": 250.228,
+          "start_monotonic_ns": 30796171000000,
+          "terminal_monotonic_ns": 30796468000000,
+          "duration_ms": 297.0
+        },
+        {
+          "operation_id": "2e05aa7f-a42f-42ab-bf8f-190e62668155",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:07.175921+00:00",
+          "completed_at": "2026-09-29T09:08:07.368565+00:00",
+          "wall_duration_ms": 192.644,
+          "start_monotonic_ns": 30795453000000,
+          "terminal_monotonic_ns": 30795656000000,
+          "duration_ms": 203.0
+        },
+        {
+          "operation_id": "3c090dd0-0b91-45c0-9576-f6ac05e40bc1",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:07.884609+00:00",
+          "completed_at": "2026-09-29T09:08:08.141733+00:00",
+          "wall_duration_ms": 257.124,
+          "start_monotonic_ns": 30796156000000,
+          "terminal_monotonic_ns": 30796468000000,
+          "duration_ms": 312.0
+        },
+        {
+          "operation_id": "fc70e6f3-7840-48d5-bd01-60f39b4d786e",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:08.339768+00:00",
+          "completed_at": "2026-09-29T09:08:08.564950+00:00",
+          "wall_duration_ms": 225.182,
+          "start_monotonic_ns": 30796609000000,
+          "terminal_monotonic_ns": 30796859000000,
+          "duration_ms": 250.0
+        },
+        {
+          "operation_id": "5a1ea2f6-c3aa-4951-9278-128d48fe890c",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:08.689002+00:00",
+          "completed_at": "2026-09-29T09:08:08.919153+00:00",
+          "wall_duration_ms": 230.151,
+          "start_monotonic_ns": 30796968000000,
+          "terminal_monotonic_ns": 30797218000000,
+          "duration_ms": 250.0
+        },
+        {
+          "operation_id": "ead2d1f8-94d0-481d-a60a-ecfc5ed14c3d",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:10.836525+00:00",
+          "completed_at": "2026-09-29T09:08:11.043546+00:00",
+          "wall_duration_ms": 207.021,
+          "start_monotonic_ns": 30799109000000,
+          "terminal_monotonic_ns": 30799343000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "918d5621-389d-46a7-98da-c8236753d9c6",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:09.047062+00:00",
+          "completed_at": "2026-09-29T09:08:09.272197+00:00",
+          "wall_duration_ms": 225.135,
+          "start_monotonic_ns": 30797328000000,
+          "terminal_monotonic_ns": 30797562000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "f7fb5d2a-5d75-4b4f-b4cc-d204c25226ad",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:09.451870+00:00",
+          "completed_at": "2026-09-29T09:08:09.678990+00:00",
+          "wall_duration_ms": 227.12,
+          "start_monotonic_ns": 30797734000000,
+          "terminal_monotonic_ns": 30797968000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "16eee562-9ec7-48c6-8d23-2a8b39a5cffd",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:09.788055+00:00",
+          "completed_at": "2026-09-29T09:08:10.002321+00:00",
+          "wall_duration_ms": 214.266,
+          "start_monotonic_ns": 30798062000000,
+          "terminal_monotonic_ns": 30798296000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "b926479e-40de-450b-8424-6ccc0e680ee1",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:10.105634+00:00",
+          "completed_at": "2026-09-29T09:08:10.335701+00:00",
+          "wall_duration_ms": 230.067,
+          "start_monotonic_ns": 30798375000000,
+          "terminal_monotonic_ns": 30798625000000,
+          "duration_ms": 250.0
+        },
+        {
+          "operation_id": "bea3d400-cd55-42f7-8aa5-73289e9a1bf0",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:10.463027+00:00",
+          "completed_at": "2026-09-29T09:08:10.691878+00:00",
+          "wall_duration_ms": 228.851,
+          "start_monotonic_ns": 30798734000000,
+          "terminal_monotonic_ns": 30798984000000,
+          "duration_ms": 250.0
+        },
+        {
+          "operation_id": "8f002796-961a-46b5-8a88-57dbc43d767b",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:08.351075+00:00",
+          "completed_at": "2026-09-29T09:08:08.564570+00:00",
+          "wall_duration_ms": 213.495,
+          "start_monotonic_ns": 30796625000000,
+          "terminal_monotonic_ns": 30796859000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "6b1da306-0c8d-4275-962c-ed6a269269c5",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:08.708507+00:00",
+          "completed_at": "2026-09-29T09:08:08.919531+00:00",
+          "wall_duration_ms": 211.024,
+          "start_monotonic_ns": 30796984000000,
+          "terminal_monotonic_ns": 30797218000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "3b719ad8-d682-4cff-b90f-67eb9f004d3d",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:09.057899+00:00",
+          "completed_at": "2026-09-29T09:08:09.272559+00:00",
+          "wall_duration_ms": 214.66,
+          "start_monotonic_ns": 30797328000000,
+          "terminal_monotonic_ns": 30797562000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "07c15883-d8d7-4b5d-a354-555e8c06233a",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:09.465746+00:00",
+          "completed_at": "2026-09-29T09:08:09.680050+00:00",
+          "wall_duration_ms": 214.304,
+          "start_monotonic_ns": 30797750000000,
+          "terminal_monotonic_ns": 30797968000000,
+          "duration_ms": 218.0
+        },
+        {
+          "operation_id": "be4732f2-9ff3-4433-833c-346efc41d33f",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:09.799870+00:00",
+          "completed_at": "2026-09-29T09:08:10.002746+00:00",
+          "wall_duration_ms": 202.876,
+          "start_monotonic_ns": 30798078000000,
+          "terminal_monotonic_ns": 30798296000000,
+          "duration_ms": 218.0
+        },
+        {
+          "operation_id": "307d78bd-eaa2-4ca5-86f1-0e8f3d0912cb",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:10.116772+00:00",
+          "completed_at": "2026-09-29T09:08:10.335380+00:00",
+          "wall_duration_ms": 218.608,
+          "start_monotonic_ns": 30798390000000,
+          "terminal_monotonic_ns": 30798625000000,
+          "duration_ms": 235.0
+        },
+        {
+          "operation_id": "e98284f4-9b0b-4452-a107-a5fcfb6135ce",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:10.474740+00:00",
+          "completed_at": "2026-09-29T09:08:10.691516+00:00",
+          "wall_duration_ms": 216.776,
+          "start_monotonic_ns": 30798750000000,
+          "terminal_monotonic_ns": 30798984000000,
+          "duration_ms": 234.0
+        },
+        {
+          "operation_id": "95559d81-5d9f-410a-b7fd-c65acd0f8d09",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:10.849930+00:00",
+          "completed_at": "2026-09-29T09:08:11.044355+00:00",
+          "wall_duration_ms": 194.425,
+          "start_monotonic_ns": 30799125000000,
+          "terminal_monotonic_ns": 30799343000000,
+          "duration_ms": 218.0
+        }
+      ],
+      "tool_events": [
+        {
+          "operation_id": "3a442302-defb-46a6-9638-94634892f4c0",
+          "event": "started",
+          "time_ns": 30781703000000,
+          "seq": 1
+        },
+        {
+          "operation_id": "a51aaecf-990f-4256-9fb8-6fb208cc2239",
+          "event": "started",
+          "time_ns": 30781718000000,
+          "seq": 2
+        },
+        {
+          "operation_id": "3a442302-defb-46a6-9638-94634892f4c0",
+          "event": "terminal",
+          "time_ns": 30781921000000,
+          "seq": 3
+        },
+        {
+          "operation_id": "a51aaecf-990f-4256-9fb8-6fb208cc2239",
+          "event": "terminal",
+          "time_ns": 30781937000000,
+          "seq": 4
+        },
+        {
+          "operation_id": "624528ac-3854-4750-be9b-1b6c2b7db0ca",
+          "event": "started",
+          "time_ns": 30782093000000,
+          "seq": 5
+        },
+        {
+          "operation_id": "455289f6-c007-40e4-9e70-334375099a65",
+          "event": "started",
+          "time_ns": 30782109000000,
+          "seq": 6
+        },
+        {
+          "operation_id": "624528ac-3854-4750-be9b-1b6c2b7db0ca",
+          "event": "terminal",
+          "time_ns": 30782312000000,
+          "seq": 7
+        },
+        {
+          "operation_id": "455289f6-c007-40e4-9e70-334375099a65",
+          "event": "terminal",
+          "time_ns": 30782328000000,
+          "seq": 8
+        },
+        {
+          "operation_id": "38858b17-fecf-4a48-a9a3-ae4cf00458b6",
+          "event": "started",
+          "time_ns": 30782406000000,
+          "seq": 9
+        },
+        {
+          "operation_id": "7f968d07-77a7-40eb-9e43-39ff950a1b48",
+          "event": "started",
+          "time_ns": 30782406000000,
+          "seq": 10
+        },
+        {
+          "operation_id": "38858b17-fecf-4a48-a9a3-ae4cf00458b6",
+          "event": "terminal",
+          "time_ns": 30782625000000,
+          "seq": 11
+        },
+        {
+          "operation_id": "7f968d07-77a7-40eb-9e43-39ff950a1b48",
+          "event": "terminal",
+          "time_ns": 30782625000000,
+          "seq": 12
+        },
+        {
+          "operation_id": "878e8301-b682-4259-998c-2eb99b9de4fc",
+          "event": "started",
+          "time_ns": 30782718000000,
+          "seq": 13
+        },
+        {
+          "operation_id": "7bf2cef2-1ea5-47a4-9ba3-24ec933d68a1",
+          "event": "started",
+          "time_ns": 30782734000000,
+          "seq": 14
+        },
+        {
+          "operation_id": "878e8301-b682-4259-998c-2eb99b9de4fc",
+          "event": "terminal",
+          "time_ns": 30782937000000,
+          "seq": 15
+        },
+        {
+          "operation_id": "7bf2cef2-1ea5-47a4-9ba3-24ec933d68a1",
+          "event": "terminal",
+          "time_ns": 30782937000000,
+          "seq": 16
+        },
+        {
+          "operation_id": "b99b83fc-8949-4ef9-9fe0-db587897222f",
+          "event": "started",
+          "time_ns": 30783046000000,
+          "seq": 17
+        },
+        {
+          "operation_id": "eece94b6-af04-4c16-8d4a-3f56de145be6",
+          "event": "started",
+          "time_ns": 30783062000000,
+          "seq": 18
+        },
+        {
+          "operation_id": "b99b83fc-8949-4ef9-9fe0-db587897222f",
+          "event": "terminal",
+          "time_ns": 30783265000000,
+          "seq": 19
+        },
+        {
+          "operation_id": "eece94b6-af04-4c16-8d4a-3f56de145be6",
+          "event": "terminal",
+          "time_ns": 30783265000000,
+          "seq": 20
+        },
+        {
+          "operation_id": "8237a497-6581-411d-9642-3448c9fa2e87",
+          "event": "started",
+          "time_ns": 30783359000000,
+          "seq": 21
+        },
+        {
+          "operation_id": "fc6d4e20-c5ce-4c12-9044-679b6f497d3f",
+          "event": "started",
+          "time_ns": 30783359000000,
+          "seq": 22
+        },
+        {
+          "operation_id": "8237a497-6581-411d-9642-3448c9fa2e87",
+          "event": "terminal",
+          "time_ns": 30783578000000,
+          "seq": 23
+        },
+        {
+          "operation_id": "fc6d4e20-c5ce-4c12-9044-679b6f497d3f",
+          "event": "terminal",
+          "time_ns": 30783578000000,
+          "seq": 24
+        },
+        {
+          "operation_id": "311b3d96-81ec-4fee-852d-6e8b0bf5e980",
+          "event": "started",
+          "time_ns": 30783875000000,
+          "seq": 25
+        },
+        {
+          "operation_id": "d7e6d40a-0804-4f77-a0b6-1c0464399fd8",
+          "event": "started",
+          "time_ns": 30783890000000,
+          "seq": 26
+        },
+        {
+          "operation_id": "311b3d96-81ec-4fee-852d-6e8b0bf5e980",
+          "event": "terminal",
+          "time_ns": 30784109000000,
+          "seq": 27
+        },
+        {
+          "operation_id": "d7e6d40a-0804-4f77-a0b6-1c0464399fd8",
+          "event": "terminal",
+          "time_ns": 30784109000000,
+          "seq": 28
+        },
+        {
+          "operation_id": "80030ea9-8e6c-45e0-a504-ef6dca3a9511",
+          "event": "started",
+          "time_ns": 30784218000000,
+          "seq": 29
+        },
+        {
+          "operation_id": "d8065934-4c9e-4006-99d2-a635738ca2a0",
+          "event": "started",
+          "time_ns": 30784234000000,
+          "seq": 30
+        },
+        {
+          "operation_id": "80030ea9-8e6c-45e0-a504-ef6dca3a9511",
+          "event": "terminal",
+          "time_ns": 30784453000000,
+          "seq": 31
+        },
+        {
+          "operation_id": "d8065934-4c9e-4006-99d2-a635738ca2a0",
+          "event": "terminal",
+          "time_ns": 30784453000000,
+          "seq": 32
+        },
+        {
+          "operation_id": "416c3810-614b-440c-be5d-faf66306ca7e",
+          "event": "started",
+          "time_ns": 30784578000000,
+          "seq": 33
+        },
+        {
+          "operation_id": "64ea57f0-9f33-478e-9b56-40c6cb266dcf",
+          "event": "started",
+          "time_ns": 30784593000000,
+          "seq": 34
+        },
+        {
+          "operation_id": "64ea57f0-9f33-478e-9b56-40c6cb266dcf",
+          "event": "terminal",
+          "time_ns": 30784843000000,
+          "seq": 35
+        },
+        {
+          "operation_id": "416c3810-614b-440c-be5d-faf66306ca7e",
+          "event": "terminal",
+          "time_ns": 30784843000000,
+          "seq": 36
+        },
+        {
+          "operation_id": "7cb5b87c-611f-437f-8da2-2eb446eb9b1b",
+          "event": "started",
+          "time_ns": 30785046000000,
+          "seq": 37
+        },
+        {
+          "operation_id": "b61762a8-8039-4f8a-ae9e-613fdbaadda0",
+          "event": "started",
+          "time_ns": 30785062000000,
+          "seq": 38
+        },
+        {
+          "operation_id": "7cb5b87c-611f-437f-8da2-2eb446eb9b1b",
+          "event": "terminal",
+          "time_ns": 30785281000000,
+          "seq": 39
+        },
+        {
+          "operation_id": "b61762a8-8039-4f8a-ae9e-613fdbaadda0",
+          "event": "terminal",
+          "time_ns": 30785281000000,
+          "seq": 40
+        },
+        {
+          "operation_id": "3ca1e9fb-58c9-4bb3-bd41-00d7ee45f757",
+          "event": "started",
+          "time_ns": 30785437000000,
+          "seq": 41
+        },
+        {
+          "operation_id": "2dcbbd1f-e39c-44ae-b94f-654b3058d89f",
+          "event": "started",
+          "time_ns": 30785453000000,
+          "seq": 42
+        },
+        {
+          "operation_id": "2dcbbd1f-e39c-44ae-b94f-654b3058d89f",
+          "event": "terminal",
+          "time_ns": 30785656000000,
+          "seq": 43
+        },
+        {
+          "operation_id": "3ca1e9fb-58c9-4bb3-bd41-00d7ee45f757",
+          "event": "terminal",
+          "time_ns": 30785671000000,
+          "seq": 44
+        },
+        {
+          "operation_id": "70ae5799-02d8-4a69-a8a4-4ff027c6ac7a",
+          "event": "started",
+          "time_ns": 30785812000000,
+          "seq": 45
+        },
+        {
+          "operation_id": "c39d68ed-ab95-4482-865e-d88be0a106f8",
+          "event": "started",
+          "time_ns": 30785812000000,
+          "seq": 46
+        },
+        {
+          "operation_id": "c39d68ed-ab95-4482-865e-d88be0a106f8",
+          "event": "terminal",
+          "time_ns": 30786046000000,
+          "seq": 47
+        },
+        {
+          "operation_id": "70ae5799-02d8-4a69-a8a4-4ff027c6ac7a",
+          "event": "terminal",
+          "time_ns": 30786046000000,
+          "seq": 48
+        },
+        {
+          "operation_id": "515a60bb-9f65-43ed-8fef-96a1db95e2f5",
+          "event": "started",
+          "time_ns": 30786234000000,
+          "seq": 49
+        },
+        {
+          "operation_id": "576f941e-caaa-4e6a-b81c-3ba37adf4ec6",
+          "event": "started",
+          "time_ns": 30786296000000,
+          "seq": 50
+        },
+        {
+          "operation_id": "515a60bb-9f65-43ed-8fef-96a1db95e2f5",
+          "event": "terminal",
+          "time_ns": 30786453000000,
+          "seq": 51
+        },
+        {
+          "operation_id": "576f941e-caaa-4e6a-b81c-3ba37adf4ec6",
+          "event": "terminal",
+          "time_ns": 30786531000000,
+          "seq": 52
+        },
+        {
+          "operation_id": "6da7a795-c6b2-4e2c-b086-9adc34f7bc10",
+          "event": "started",
+          "time_ns": 30786546000000,
+          "seq": 53
+        },
+        {
+          "operation_id": "2ad1e01e-d74d-4a45-9019-46854977b9d6",
+          "event": "started",
+          "time_ns": 30786625000000,
+          "seq": 54
+        },
+        {
+          "operation_id": "6da7a795-c6b2-4e2c-b086-9adc34f7bc10",
+          "event": "terminal",
+          "time_ns": 30786781000000,
+          "seq": 55
+        },
+        {
+          "operation_id": "2ad1e01e-d74d-4a45-9019-46854977b9d6",
+          "event": "terminal",
+          "time_ns": 30786843000000,
+          "seq": 56
+        },
+        {
+          "operation_id": "f6f4ea05-4a39-4cba-9494-946e46991be6",
+          "event": "started",
+          "time_ns": 30786890000000,
+          "seq": 57
+        },
+        {
+          "operation_id": "1f4e0de8-8142-45a4-8558-929ed2006edb",
+          "event": "started",
+          "time_ns": 30787046000000,
+          "seq": 58
+        },
+        {
+          "operation_id": "f6f4ea05-4a39-4cba-9494-946e46991be6",
+          "event": "terminal",
+          "time_ns": 30787140000000,
+          "seq": 59
+        },
+        {
+          "operation_id": "10105ca1-be1c-4657-a802-8f6d5456515a",
+          "event": "started",
+          "time_ns": 30787281000000,
+          "seq": 60
+        },
+        {
+          "operation_id": "1f4e0de8-8142-45a4-8558-929ed2006edb",
+          "event": "terminal",
+          "time_ns": 30787296000000,
+          "seq": 61
+        },
+        {
+          "operation_id": "cefe056c-9ce8-47fa-acb3-00ff11101f73",
+          "event": "started",
+          "time_ns": 30787421000000,
+          "seq": 62
+        },
+        {
+          "operation_id": "10105ca1-be1c-4657-a802-8f6d5456515a",
+          "event": "terminal",
+          "time_ns": 30787500000000,
+          "seq": 63
+        },
+        {
+          "operation_id": "87d065ac-8e34-48a7-80a7-10f868b8d858",
+          "event": "started",
+          "time_ns": 30787593000000,
+          "seq": 64
+        },
+        {
+          "operation_id": "cefe056c-9ce8-47fa-acb3-00ff11101f73",
+          "event": "terminal",
+          "time_ns": 30787640000000,
+          "seq": 65
+        },
+        {
+          "operation_id": "5b385f01-a0b8-43cc-a054-77137d91be36",
+          "event": "started",
+          "time_ns": 30787750000000,
+          "seq": 66
+        },
+        {
+          "operation_id": "87d065ac-8e34-48a7-80a7-10f868b8d858",
+          "event": "terminal",
+          "time_ns": 30787828000000,
+          "seq": 67
+        },
+        {
+          "operation_id": "5b385f01-a0b8-43cc-a054-77137d91be36",
+          "event": "terminal",
+          "time_ns": 30788046000000,
+          "seq": 68
+        },
+        {
+          "operation_id": "66810c3a-7550-433b-921f-b0590d95b8e2",
+          "event": "started",
+          "time_ns": 30788078000000,
+          "seq": 69
+        },
+        {
+          "operation_id": "010e732e-28ee-42ac-a4ec-6f21d73f20db",
+          "event": "started",
+          "time_ns": 30788171000000,
+          "seq": 70
+        },
+        {
+          "operation_id": "66810c3a-7550-433b-921f-b0590d95b8e2",
+          "event": "terminal",
+          "time_ns": 30788296000000,
+          "seq": 71
+        },
+        {
+          "operation_id": "5b9e0ca9-05ed-45f0-8640-51ff6a387f71",
+          "event": "started",
+          "time_ns": 30788375000000,
+          "seq": 72
+        },
+        {
+          "operation_id": "010e732e-28ee-42ac-a4ec-6f21d73f20db",
+          "event": "terminal",
+          "time_ns": 30788390000000,
+          "seq": 73
+        },
+        {
+          "operation_id": "da687d10-9bdc-4070-b87c-2e64b9879c70",
+          "event": "started",
+          "time_ns": 30788484000000,
+          "seq": 74
+        },
+        {
+          "operation_id": "5b9e0ca9-05ed-45f0-8640-51ff6a387f71",
+          "event": "terminal",
+          "time_ns": 30788593000000,
+          "seq": 75
+        },
+        {
+          "operation_id": "83b8d69e-c4fd-419d-ae04-315a59602d51",
+          "event": "started",
+          "time_ns": 30788671000000,
+          "seq": 76
+        },
+        {
+          "operation_id": "da687d10-9bdc-4070-b87c-2e64b9879c70",
+          "event": "terminal",
+          "time_ns": 30788687000000,
+          "seq": 77
+        },
+        {
+          "operation_id": "b5793753-069e-4f73-b399-7ba46e6e15a6",
+          "event": "started",
+          "time_ns": 30788750000000,
+          "seq": 78
+        },
+        {
+          "operation_id": "83b8d69e-c4fd-419d-ae04-315a59602d51",
+          "event": "terminal",
+          "time_ns": 30788890000000,
+          "seq": 79
+        },
+        {
+          "operation_id": "3bd8c4ab-3f53-4ff0-b446-55a687e584f0",
+          "event": "started",
+          "time_ns": 30788968000000,
+          "seq": 80
+        },
+        {
+          "operation_id": "b5793753-069e-4f73-b399-7ba46e6e15a6",
+          "event": "terminal",
+          "time_ns": 30788984000000,
+          "seq": 81
+        },
+        {
+          "operation_id": "774a58d0-3c18-42df-9a39-c8d39c2b44cc",
+          "event": "started",
+          "time_ns": 30789046000000,
+          "seq": 82
+        },
+        {
+          "operation_id": "3bd8c4ab-3f53-4ff0-b446-55a687e584f0",
+          "event": "terminal",
+          "time_ns": 30789171000000,
+          "seq": 83
+        },
+        {
+          "operation_id": "77e45ca1-e0c7-4a1a-ac6f-b7e111b3ef9f",
+          "event": "started",
+          "time_ns": 30789265000000,
+          "seq": 84
+        },
+        {
+          "operation_id": "774a58d0-3c18-42df-9a39-c8d39c2b44cc",
+          "event": "terminal",
+          "time_ns": 30789281000000,
+          "seq": 85
+        },
+        {
+          "operation_id": "1fbcc368-d014-4d4c-ad4e-febf4b1ace1b",
+          "event": "started",
+          "time_ns": 30789390000000,
+          "seq": 86
+        },
+        {
+          "operation_id": "77e45ca1-e0c7-4a1a-ac6f-b7e111b3ef9f",
+          "event": "terminal",
+          "time_ns": 30789515000000,
+          "seq": 87
+        },
+        {
+          "operation_id": "76457f39-07ab-4fd3-b7b8-df574cf9b49d",
+          "event": "started",
+          "time_ns": 30789593000000,
+          "seq": 88
+        },
+        {
+          "operation_id": "1fbcc368-d014-4d4c-ad4e-febf4b1ace1b",
+          "event": "terminal",
+          "time_ns": 30789609000000,
+          "seq": 89
+        },
+        {
+          "operation_id": "fa058df2-cbb4-490e-8dff-70a2db3f14aa",
+          "event": "started",
+          "time_ns": 30789687000000,
+          "seq": 90
+        },
+        {
+          "operation_id": "76457f39-07ab-4fd3-b7b8-df574cf9b49d",
+          "event": "terminal",
+          "time_ns": 30789812000000,
+          "seq": 91
+        },
+        {
+          "operation_id": "1030edf7-76de-4898-9165-9c049acc4866",
+          "event": "started",
+          "time_ns": 30789875000000,
+          "seq": 92
+        },
+        {
+          "operation_id": "fa058df2-cbb4-490e-8dff-70a2db3f14aa",
+          "event": "terminal",
+          "time_ns": 30789890000000,
+          "seq": 93
+        },
+        {
+          "operation_id": "b4a426b1-a78f-412b-8bfa-8c59aa70431f",
+          "event": "started",
+          "time_ns": 30789953000000,
+          "seq": 94
+        },
+        {
+          "operation_id": "1030edf7-76de-4898-9165-9c049acc4866",
+          "event": "terminal",
+          "time_ns": 30790140000000,
+          "seq": 95
+        },
+        {
+          "operation_id": "b4a426b1-a78f-412b-8bfa-8c59aa70431f",
+          "event": "terminal",
+          "time_ns": 30790156000000,
+          "seq": 96
+        },
+        {
+          "operation_id": "efb27a44-8159-4422-a57d-dabf74eea7e3",
+          "event": "started",
+          "time_ns": 30790265000000,
+          "seq": 97
+        },
+        {
+          "operation_id": "83989cad-b218-4277-981f-a76cfd71d7f0",
+          "event": "started",
+          "time_ns": 30790281000000,
+          "seq": 98
+        },
+        {
+          "operation_id": "efb27a44-8159-4422-a57d-dabf74eea7e3",
+          "event": "terminal",
+          "time_ns": 30790484000000,
+          "seq": 99
+        },
+        {
+          "operation_id": "83989cad-b218-4277-981f-a76cfd71d7f0",
+          "event": "terminal",
+          "time_ns": 30790484000000,
+          "seq": 100
+        },
+        {
+          "operation_id": "0cc007bb-53ac-4289-a2bf-9809c69ce61c",
+          "event": "started",
+          "time_ns": 30790562000000,
+          "seq": 101
+        },
+        {
+          "operation_id": "83d5843b-4e8a-436c-b817-3eb72f9ddb65",
+          "event": "started",
+          "time_ns": 30790578000000,
+          "seq": 102
+        },
+        {
+          "operation_id": "0cc007bb-53ac-4289-a2bf-9809c69ce61c",
+          "event": "terminal",
+          "time_ns": 30790796000000,
+          "seq": 103
+        },
+        {
+          "operation_id": "83d5843b-4e8a-436c-b817-3eb72f9ddb65",
+          "event": "terminal",
+          "time_ns": 30790812000000,
+          "seq": 104
+        },
+        {
+          "operation_id": "09419ca6-9aed-49e0-b33a-a1f2976a0407",
+          "event": "started",
+          "time_ns": 30790906000000,
+          "seq": 105
+        },
+        {
+          "operation_id": "bcd0f2ac-58e3-4bd7-b2ca-701ac511ca65",
+          "event": "started",
+          "time_ns": 30790921000000,
+          "seq": 106
+        },
+        {
+          "operation_id": "09419ca6-9aed-49e0-b33a-a1f2976a0407",
+          "event": "terminal",
+          "time_ns": 30791140000000,
+          "seq": 107
+        },
+        {
+          "operation_id": "bcd0f2ac-58e3-4bd7-b2ca-701ac511ca65",
+          "event": "terminal",
+          "time_ns": 30791140000000,
+          "seq": 108
+        },
+        {
+          "operation_id": "780b4a3a-4dac-4c78-807f-af1d06e695ef",
+          "event": "started",
+          "time_ns": 30791218000000,
+          "seq": 109
+        },
+        {
+          "operation_id": "fc2ea6b9-85c7-40ab-b0dc-2d326bb395d3",
+          "event": "started",
+          "time_ns": 30791234000000,
+          "seq": 110
+        },
+        {
+          "operation_id": "780b4a3a-4dac-4c78-807f-af1d06e695ef",
+          "event": "terminal",
+          "time_ns": 30791453000000,
+          "seq": 111
+        },
+        {
+          "operation_id": "fc2ea6b9-85c7-40ab-b0dc-2d326bb395d3",
+          "event": "terminal",
+          "time_ns": 30791453000000,
+          "seq": 112
+        },
+        {
+          "operation_id": "decf125a-a3ec-44db-936d-560972cba571",
+          "event": "started",
+          "time_ns": 30791562000000,
+          "seq": 113
+        },
+        {
+          "operation_id": "532557b0-7372-4481-b368-58205e9426bb",
+          "event": "started",
+          "time_ns": 30791578000000,
+          "seq": 114
+        },
+        {
+          "operation_id": "532557b0-7372-4481-b368-58205e9426bb",
+          "event": "terminal",
+          "time_ns": 30791812000000,
+          "seq": 115
+        },
+        {
+          "operation_id": "decf125a-a3ec-44db-936d-560972cba571",
+          "event": "terminal",
+          "time_ns": 30791812000000,
+          "seq": 116
+        },
+        {
+          "operation_id": "5036a8f4-d117-4e38-9cb7-9921f048cc55",
+          "event": "started",
+          "time_ns": 30791937000000,
+          "seq": 117
+        },
+        {
+          "operation_id": "b1683758-b746-4a55-a6d4-0cc49ce2e823",
+          "event": "started",
+          "time_ns": 30791953000000,
+          "seq": 118
+        },
+        {
+          "operation_id": "b1683758-b746-4a55-a6d4-0cc49ce2e823",
+          "event": "terminal",
+          "time_ns": 30792171000000,
+          "seq": 119
+        },
+        {
+          "operation_id": "5036a8f4-d117-4e38-9cb7-9921f048cc55",
+          "event": "terminal",
+          "time_ns": 30792171000000,
+          "seq": 120
+        },
+        {
+          "operation_id": "42407604-a4ad-4ae4-952a-062042429b80",
+          "event": "started",
+          "time_ns": 30792265000000,
+          "seq": 121
+        },
+        {
+          "operation_id": "da636d55-f209-41b1-ad07-d5ed07d1001d",
+          "event": "started",
+          "time_ns": 30792265000000,
+          "seq": 122
+        },
+        {
+          "operation_id": "da636d55-f209-41b1-ad07-d5ed07d1001d",
+          "event": "terminal",
+          "time_ns": 30792500000000,
+          "seq": 123
+        },
+        {
+          "operation_id": "42407604-a4ad-4ae4-952a-062042429b80",
+          "event": "terminal",
+          "time_ns": 30792500000000,
+          "seq": 124
+        },
+        {
+          "operation_id": "bda1f816-8305-4494-8bff-089469a81785",
+          "event": "started",
+          "time_ns": 30792609000000,
+          "seq": 125
+        },
+        {
+          "operation_id": "d3648c06-417b-4cd9-beca-0866d373fa17",
+          "event": "started",
+          "time_ns": 30792625000000,
+          "seq": 126
+        },
+        {
+          "operation_id": "bda1f816-8305-4494-8bff-089469a81785",
+          "event": "terminal",
+          "time_ns": 30792828000000,
+          "seq": 127
+        },
+        {
+          "operation_id": "d3648c06-417b-4cd9-beca-0866d373fa17",
+          "event": "terminal",
+          "time_ns": 30792828000000,
+          "seq": 128
+        },
+        {
+          "operation_id": "b46ddd93-e7e0-4e83-83ae-e700e080858b",
+          "event": "started",
+          "time_ns": 30792968000000,
+          "seq": 129
+        },
+        {
+          "operation_id": "4165a457-675f-42ff-a06c-6029fbce7f6f",
+          "event": "started",
+          "time_ns": 30792984000000,
+          "seq": 130
+        },
+        {
+          "operation_id": "b46ddd93-e7e0-4e83-83ae-e700e080858b",
+          "event": "terminal",
+          "time_ns": 30793265000000,
+          "seq": 131
+        },
+        {
+          "operation_id": "4165a457-675f-42ff-a06c-6029fbce7f6f",
+          "event": "terminal",
+          "time_ns": 30793265000000,
+          "seq": 132
+        },
+        {
+          "operation_id": "a571a194-dcba-4999-84db-6c0fbc028cef",
+          "event": "started",
+          "time_ns": 30793390000000,
+          "seq": 133
+        },
+        {
+          "operation_id": "d538d6f1-1b4b-429d-90af-f537b6119b12",
+          "event": "started",
+          "time_ns": 30793406000000,
+          "seq": 134
+        },
+        {
+          "operation_id": "a571a194-dcba-4999-84db-6c0fbc028cef",
+          "event": "terminal",
+          "time_ns": 30793625000000,
+          "seq": 135
+        },
+        {
+          "operation_id": "d538d6f1-1b4b-429d-90af-f537b6119b12",
+          "event": "terminal",
+          "time_ns": 30793625000000,
+          "seq": 136
+        },
+        {
+          "operation_id": "0798084b-1abe-403d-96cb-16924b319f1f",
+          "event": "started",
+          "time_ns": 30793734000000,
+          "seq": 137
+        },
+        {
+          "operation_id": "8a2ae35f-d3d7-46d3-be67-6aa8c976539b",
+          "event": "started",
+          "time_ns": 30793734000000,
+          "seq": 138
+        },
+        {
+          "operation_id": "8a2ae35f-d3d7-46d3-be67-6aa8c976539b",
+          "event": "terminal",
+          "time_ns": 30793953000000,
+          "seq": 139
+        },
+        {
+          "operation_id": "0798084b-1abe-403d-96cb-16924b319f1f",
+          "event": "terminal",
+          "time_ns": 30793953000000,
+          "seq": 140
+        },
+        {
+          "operation_id": "6adaeaa3-96fc-4d3d-93aa-39c25d387e86",
+          "event": "started",
+          "time_ns": 30794125000000,
+          "seq": 141
+        },
+        {
+          "operation_id": "35441a3a-fe90-4344-8b08-1fa1af1a7dcf",
+          "event": "started",
+          "time_ns": 30794140000000,
+          "seq": 142
+        },
+        {
+          "operation_id": "6adaeaa3-96fc-4d3d-93aa-39c25d387e86",
+          "event": "terminal",
+          "time_ns": 30794343000000,
+          "seq": 143
+        },
+        {
+          "operation_id": "35441a3a-fe90-4344-8b08-1fa1af1a7dcf",
+          "event": "terminal",
+          "time_ns": 30794343000000,
+          "seq": 144
+        },
+        {
+          "operation_id": "a7b74555-114a-4276-848b-b0883eb2c023",
+          "event": "started",
+          "time_ns": 30794437000000,
+          "seq": 145
+        },
+        {
+          "operation_id": "92b29837-2805-4995-8e0d-37112ec18c99",
+          "event": "started",
+          "time_ns": 30794453000000,
+          "seq": 146
+        },
+        {
+          "operation_id": "a7b74555-114a-4276-848b-b0883eb2c023",
+          "event": "terminal",
+          "time_ns": 30794640000000,
+          "seq": 147
+        },
+        {
+          "operation_id": "92b29837-2805-4995-8e0d-37112ec18c99",
+          "event": "terminal",
+          "time_ns": 30794656000000,
+          "seq": 148
+        },
+        {
+          "operation_id": "fe539fd8-3713-4ba0-9236-0f4028c5fea3",
+          "event": "started",
+          "time_ns": 30794765000000,
+          "seq": 149
+        },
+        {
+          "operation_id": "49df5286-b9df-4a4c-a50d-235e214a6870",
+          "event": "started",
+          "time_ns": 30794781000000,
+          "seq": 150
+        },
+        {
+          "operation_id": "fe539fd8-3713-4ba0-9236-0f4028c5fea3",
+          "event": "terminal",
+          "time_ns": 30794984000000,
+          "seq": 151
+        },
+        {
+          "operation_id": "49df5286-b9df-4a4c-a50d-235e214a6870",
+          "event": "terminal",
+          "time_ns": 30795000000000,
+          "seq": 152
+        },
+        {
+          "operation_id": "de7f2a24-4eba-48fd-89d2-eb5667fcc59d",
+          "event": "started",
+          "time_ns": 30795093000000,
+          "seq": 153
+        },
+        {
+          "operation_id": "de797d67-fc53-460d-a5ec-1a4793efda1b",
+          "event": "started",
+          "time_ns": 30795093000000,
+          "seq": 154
+        },
+        {
+          "operation_id": "de797d67-fc53-460d-a5ec-1a4793efda1b",
+          "event": "terminal",
+          "time_ns": 30795312000000,
+          "seq": 155
+        },
+        {
+          "operation_id": "de7f2a24-4eba-48fd-89d2-eb5667fcc59d",
+          "event": "terminal",
+          "time_ns": 30795312000000,
+          "seq": 156
+        },
+        {
+          "operation_id": "9ab95fe8-0a65-4f83-9152-7956ffd2fa69",
+          "event": "started",
+          "time_ns": 30795437000000,
+          "seq": 157
+        },
+        {
+          "operation_id": "2e05aa7f-a42f-42ab-bf8f-190e62668155",
+          "event": "started",
+          "time_ns": 30795453000000,
+          "seq": 158
+        },
+        {
+          "operation_id": "9ab95fe8-0a65-4f83-9152-7956ffd2fa69",
+          "event": "terminal",
+          "time_ns": 30795656000000,
+          "seq": 159
+        },
+        {
+          "operation_id": "2e05aa7f-a42f-42ab-bf8f-190e62668155",
+          "event": "terminal",
+          "time_ns": 30795656000000,
+          "seq": 160
+        },
+        {
+          "operation_id": "c78573f2-e759-4b09-881e-23bd7ac62e03",
+          "event": "started",
+          "time_ns": 30795750000000,
+          "seq": 161
+        },
+        {
+          "operation_id": "c4869fa7-7bdd-406d-a04c-6c6c3d1fa16b",
+          "event": "started",
+          "time_ns": 30795765000000,
+          "seq": 162
+        },
+        {
+          "operation_id": "c4869fa7-7bdd-406d-a04c-6c6c3d1fa16b",
+          "event": "terminal",
+          "time_ns": 30795984000000,
+          "seq": 163
+        },
+        {
+          "operation_id": "c78573f2-e759-4b09-881e-23bd7ac62e03",
+          "event": "terminal",
+          "time_ns": 30795984000000,
+          "seq": 164
+        },
+        {
+          "operation_id": "3c090dd0-0b91-45c0-9576-f6ac05e40bc1",
+          "event": "started",
+          "time_ns": 30796156000000,
+          "seq": 165
+        },
+        {
+          "operation_id": "24604273-4b31-4719-9bb4-ea8812a058e7",
+          "event": "started",
+          "time_ns": 30796171000000,
+          "seq": 166
+        },
+        {
+          "operation_id": "3c090dd0-0b91-45c0-9576-f6ac05e40bc1",
+          "event": "terminal",
+          "time_ns": 30796468000000,
+          "seq": 167
+        },
+        {
+          "operation_id": "24604273-4b31-4719-9bb4-ea8812a058e7",
+          "event": "terminal",
+          "time_ns": 30796468000000,
+          "seq": 168
+        },
+        {
+          "operation_id": "fc70e6f3-7840-48d5-bd01-60f39b4d786e",
+          "event": "started",
+          "time_ns": 30796609000000,
+          "seq": 169
+        },
+        {
+          "operation_id": "8f002796-961a-46b5-8a88-57dbc43d767b",
+          "event": "started",
+          "time_ns": 30796625000000,
+          "seq": 170
+        },
+        {
+          "operation_id": "fc70e6f3-7840-48d5-bd01-60f39b4d786e",
+          "event": "terminal",
+          "time_ns": 30796859000000,
+          "seq": 171
+        },
+        {
+          "operation_id": "8f002796-961a-46b5-8a88-57dbc43d767b",
+          "event": "terminal",
+          "time_ns": 30796859000000,
+          "seq": 172
+        },
+        {
+          "operation_id": "5a1ea2f6-c3aa-4951-9278-128d48fe890c",
+          "event": "started",
+          "time_ns": 30796968000000,
+          "seq": 173
+        },
+        {
+          "operation_id": "6b1da306-0c8d-4275-962c-ed6a269269c5",
+          "event": "started",
+          "time_ns": 30796984000000,
+          "seq": 174
+        },
+        {
+          "operation_id": "6b1da306-0c8d-4275-962c-ed6a269269c5",
+          "event": "terminal",
+          "time_ns": 30797218000000,
+          "seq": 175
+        },
+        {
+          "operation_id": "5a1ea2f6-c3aa-4951-9278-128d48fe890c",
+          "event": "terminal",
+          "time_ns": 30797218000000,
+          "seq": 176
+        },
+        {
+          "operation_id": "918d5621-389d-46a7-98da-c8236753d9c6",
+          "event": "started",
+          "time_ns": 30797328000000,
+          "seq": 177
+        },
+        {
+          "operation_id": "3b719ad8-d682-4cff-b90f-67eb9f004d3d",
+          "event": "started",
+          "time_ns": 30797328000000,
+          "seq": 178
+        },
+        {
+          "operation_id": "918d5621-389d-46a7-98da-c8236753d9c6",
+          "event": "terminal",
+          "time_ns": 30797562000000,
+          "seq": 179
+        },
+        {
+          "operation_id": "3b719ad8-d682-4cff-b90f-67eb9f004d3d",
+          "event": "terminal",
+          "time_ns": 30797562000000,
+          "seq": 180
+        },
+        {
+          "operation_id": "f7fb5d2a-5d75-4b4f-b4cc-d204c25226ad",
+          "event": "started",
+          "time_ns": 30797734000000,
+          "seq": 181
+        },
+        {
+          "operation_id": "07c15883-d8d7-4b5d-a354-555e8c06233a",
+          "event": "started",
+          "time_ns": 30797750000000,
+          "seq": 182
+        },
+        {
+          "operation_id": "f7fb5d2a-5d75-4b4f-b4cc-d204c25226ad",
+          "event": "terminal",
+          "time_ns": 30797968000000,
+          "seq": 183
+        },
+        {
+          "operation_id": "07c15883-d8d7-4b5d-a354-555e8c06233a",
+          "event": "terminal",
+          "time_ns": 30797968000000,
+          "seq": 184
+        },
+        {
+          "operation_id": "16eee562-9ec7-48c6-8d23-2a8b39a5cffd",
+          "event": "started",
+          "time_ns": 30798062000000,
+          "seq": 185
+        },
+        {
+          "operation_id": "be4732f2-9ff3-4433-833c-346efc41d33f",
+          "event": "started",
+          "time_ns": 30798078000000,
+          "seq": 186
+        },
+        {
+          "operation_id": "16eee562-9ec7-48c6-8d23-2a8b39a5cffd",
+          "event": "terminal",
+          "time_ns": 30798296000000,
+          "seq": 187
+        },
+        {
+          "operation_id": "be4732f2-9ff3-4433-833c-346efc41d33f",
+          "event": "terminal",
+          "time_ns": 30798296000000,
+          "seq": 188
+        },
+        {
+          "operation_id": "b926479e-40de-450b-8424-6ccc0e680ee1",
+          "event": "started",
+          "time_ns": 30798375000000,
+          "seq": 189
+        },
+        {
+          "operation_id": "307d78bd-eaa2-4ca5-86f1-0e8f3d0912cb",
+          "event": "started",
+          "time_ns": 30798390000000,
+          "seq": 190
+        },
+        {
+          "operation_id": "b926479e-40de-450b-8424-6ccc0e680ee1",
+          "event": "terminal",
+          "time_ns": 30798625000000,
+          "seq": 191
+        },
+        {
+          "operation_id": "307d78bd-eaa2-4ca5-86f1-0e8f3d0912cb",
+          "event": "terminal",
+          "time_ns": 30798625000000,
+          "seq": 192
+        },
+        {
+          "operation_id": "bea3d400-cd55-42f7-8aa5-73289e9a1bf0",
+          "event": "started",
+          "time_ns": 30798734000000,
+          "seq": 193
+        },
+        {
+          "operation_id": "e98284f4-9b0b-4452-a107-a5fcfb6135ce",
+          "event": "started",
+          "time_ns": 30798750000000,
+          "seq": 194
+        },
+        {
+          "operation_id": "bea3d400-cd55-42f7-8aa5-73289e9a1bf0",
+          "event": "terminal",
+          "time_ns": 30798984000000,
+          "seq": 195
+        },
+        {
+          "operation_id": "e98284f4-9b0b-4452-a107-a5fcfb6135ce",
+          "event": "terminal",
+          "time_ns": 30798984000000,
+          "seq": 196
+        },
+        {
+          "operation_id": "ead2d1f8-94d0-481d-a60a-ecfc5ed14c3d",
+          "event": "started",
+          "time_ns": 30799109000000,
+          "seq": 197
+        },
+        {
+          "operation_id": "95559d81-5d9f-410a-b7fd-c65acd0f8d09",
+          "event": "started",
+          "time_ns": 30799125000000,
+          "seq": 198
+        },
+        {
+          "operation_id": "ead2d1f8-94d0-481d-a60a-ecfc5ed14c3d",
+          "event": "terminal",
+          "time_ns": 30799343000000,
+          "seq": 199
+        },
+        {
+          "operation_id": "95559d81-5d9f-410a-b7fd-c65acd0f8d09",
+          "event": "terminal",
+          "time_ns": 30799343000000,
+          "seq": 200
+        }
+      ],
+      "wall_clock_regressions": 0
+    },
+    {
+      "scenario": "daily-three-race",
+      "requests": 100,
+      "daily_limit": 3,
+      "max_inflight": 100,
+      "barrier_held": 3,
+      "counts": {
+        "succeeded": 3,
+        "DAILY_BUDGET_EXHAUSTED": 97
+      },
+      "admitted": 3,
+      "tool_started": 3,
+      "tool_peak": 3,
+      "end_inflight": 0,
+      "wall_seconds": 2.648,
+      "latency_ms": {
+        "p50": 1379.894,
+        "p95": 1919.91
+      },
+      "admission_ms": {
+        "p50": 741.884,
+        "p95": 956.666
+      },
+      "principal_lock_ms": {
+        "p50": 725.414,
+        "p95": 945.586
+      },
+      "tool_duration_ms": {
+        "p50": 1812.0,
+        "p95": 2031.0
+      },
+      "raw_requests": [
+        {
+          "request": 0,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 2526.06,
+          "admission_ms": 47.614,
+          "principal_lock_ms": 11.889
+        },
+        {
+          "request": 1,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 2501.838,
+          "admission_ms": 79.918,
+          "principal_lock_ms": 44.267
+        },
+        {
+          "request": 2,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 2513.58,
+          "admission_ms": 382.654,
+          "principal_lock_ms": 170.206
+        },
+        {
+          "request": 3,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 776.206,
+          "admission_ms": 424.554,
+          "principal_lock_ms": 386.89
+        },
+        {
+          "request": 4,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 960.424,
+          "admission_ms": 511.467,
+          "principal_lock_ms": 488.037
+        },
+        {
+          "request": 5,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 839.433,
+          "admission_ms": 468.797,
+          "principal_lock_ms": 413.7
+        },
+        {
+          "request": 6,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 955.544,
+          "admission_ms": 523.606,
+          "principal_lock_ms": 500.033
+        },
+        {
+          "request": 7,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 979.541,
+          "admission_ms": 541.228,
+          "principal_lock_ms": 521.085
+        },
+        {
+          "request": 8,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 908.544,
+          "admission_ms": 466.569,
+          "principal_lock_ms": 441.41
+        },
+        {
+          "request": 9,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1040.887,
+          "admission_ms": 647.757,
+          "principal_lock_ms": 631.61
+        },
+        {
+          "request": 10,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1003.917,
+          "admission_ms": 512.537,
+          "principal_lock_ms": 491.025
+        },
+        {
+          "request": 11,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1075.597,
+          "admission_ms": 685.311,
+          "principal_lock_ms": 668.077
+        },
+        {
+          "request": 12,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1000.124,
+          "admission_ms": 549.357,
+          "principal_lock_ms": 530.81
+        },
+        {
+          "request": 13,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1072.738,
+          "admission_ms": 702.402,
+          "principal_lock_ms": 687.285
+        },
+        {
+          "request": 14,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1049.188,
+          "admission_ms": 609.242,
+          "principal_lock_ms": 591.688
+        },
+        {
+          "request": 15,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1124.433,
+          "admission_ms": 766.91,
+          "principal_lock_ms": 753.816
+        },
+        {
+          "request": 16,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 992.273,
+          "admission_ms": 528.704,
+          "principal_lock_ms": 507.517
+        },
+        {
+          "request": 17,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1080.817,
+          "admission_ms": 725.685,
+          "principal_lock_ms": 709.4
+        },
+        {
+          "request": 18,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1006.173,
+          "admission_ms": 559.766,
+          "principal_lock_ms": 542.257
+        },
+        {
+          "request": 19,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1070.798,
+          "admission_ms": 689.815,
+          "principal_lock_ms": 673.025
+        },
+        {
+          "request": 20,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1003.304,
+          "admission_ms": 528.605,
+          "principal_lock_ms": 509.296
+        },
+        {
+          "request": 21,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1082.717,
+          "admission_ms": 700.018,
+          "principal_lock_ms": 684.177
+        },
+        {
+          "request": 22,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1034.492,
+          "admission_ms": 579.139,
+          "principal_lock_ms": 557.218
+        },
+        {
+          "request": 23,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1098.268,
+          "admission_ms": 713.736,
+          "principal_lock_ms": 695.74
+        },
+        {
+          "request": 24,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 977.228,
+          "admission_ms": 432.745,
+          "principal_lock_ms": 412.583
+        },
+        {
+          "request": 25,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1144.899,
+          "admission_ms": 759.036,
+          "principal_lock_ms": 744.831
+        },
+        {
+          "request": 26,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1051.854,
+          "admission_ms": 626.41,
+          "principal_lock_ms": 609.818
+        },
+        {
+          "request": 27,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1155.17,
+          "admission_ms": 768.265,
+          "principal_lock_ms": 751.471
+        },
+        {
+          "request": 28,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1076.559,
+          "admission_ms": 669.508,
+          "principal_lock_ms": 652.526
+        },
+        {
+          "request": 29,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1032.123,
+          "admission_ms": 563.178,
+          "principal_lock_ms": 546.219
+        },
+        {
+          "request": 30,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1110.347,
+          "admission_ms": 642.83,
+          "principal_lock_ms": 627.63
+        },
+        {
+          "request": 31,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1163.016,
+          "admission_ms": 736.558,
+          "principal_lock_ms": 721.827
+        },
+        {
+          "request": 32,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1279.835,
+          "admission_ms": 812.935,
+          "principal_lock_ms": 802.683
+        },
+        {
+          "request": 33,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1184.31,
+          "admission_ms": 649.083,
+          "principal_lock_ms": 635.678
+        },
+        {
+          "request": 34,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1207.257,
+          "admission_ms": 730.875,
+          "principal_lock_ms": 718.005
+        },
+        {
+          "request": 35,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1167.137,
+          "admission_ms": 648.617,
+          "principal_lock_ms": 634.365
+        },
+        {
+          "request": 36,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1190.575,
+          "admission_ms": 720.828,
+          "principal_lock_ms": 706.49
+        },
+        {
+          "request": 37,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1237.08,
+          "admission_ms": 708.527,
+          "principal_lock_ms": 692.684
+        },
+        {
+          "request": 38,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1222.475,
+          "admission_ms": 734.578,
+          "principal_lock_ms": 711.81
+        },
+        {
+          "request": 39,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1358.136,
+          "admission_ms": 823.244,
+          "principal_lock_ms": 810.692
+        },
+        {
+          "request": 40,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1246.587,
+          "admission_ms": 748.999,
+          "principal_lock_ms": 735.73
+        },
+        {
+          "request": 41,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1311.427,
+          "admission_ms": 785.116,
+          "principal_lock_ms": 770.32
+        },
+        {
+          "request": 42,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1254.339,
+          "admission_ms": 734.875,
+          "principal_lock_ms": 721.977
+        },
+        {
+          "request": 43,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1340.664,
+          "admission_ms": 813.94,
+          "principal_lock_ms": 800.199
+        },
+        {
+          "request": 44,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1099.187,
+          "admission_ms": 516.674,
+          "principal_lock_ms": 505.491
+        },
+        {
+          "request": 45,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1357.359,
+          "admission_ms": 774.301,
+          "principal_lock_ms": 761.845
+        },
+        {
+          "request": 46,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1278.615,
+          "admission_ms": 671.328,
+          "principal_lock_ms": 652.253
+        },
+        {
+          "request": 47,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1373.608,
+          "admission_ms": 763.979,
+          "principal_lock_ms": 750.973
+        },
+        {
+          "request": 48,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1280.47,
+          "admission_ms": 651.169,
+          "principal_lock_ms": 640.655
+        },
+        {
+          "request": 49,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1379.894,
+          "admission_ms": 752.988,
+          "principal_lock_ms": 738.889
+        },
+        {
+          "request": 50,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1294.978,
+          "admission_ms": 657.607,
+          "principal_lock_ms": 646.646
+        },
+        {
+          "request": 51,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1386.058,
+          "admission_ms": 751.397,
+          "principal_lock_ms": 735.727
+        },
+        {
+          "request": 52,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1297.466,
+          "admission_ms": 641.479,
+          "principal_lock_ms": 631.717
+        },
+        {
+          "request": 53,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1403.049,
+          "admission_ms": 753.328,
+          "principal_lock_ms": 739.975
+        },
+        {
+          "request": 54,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1334.209,
+          "admission_ms": 671.871,
+          "principal_lock_ms": 660.089
+        },
+        {
+          "request": 55,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1406.78,
+          "admission_ms": 745.397,
+          "principal_lock_ms": 735.393
+        },
+        {
+          "request": 56,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1382.23,
+          "admission_ms": 703.37,
+          "principal_lock_ms": 690.155
+        },
+        {
+          "request": 57,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1445.546,
+          "admission_ms": 767.317,
+          "principal_lock_ms": 751.531
+        },
+        {
+          "request": 58,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1415.244,
+          "admission_ms": 714.433,
+          "principal_lock_ms": 699.857
+        },
+        {
+          "request": 59,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1454.888,
+          "admission_ms": 754.048,
+          "principal_lock_ms": 740.465
+        },
+        {
+          "request": 60,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1426.749,
+          "admission_ms": 703.493,
+          "principal_lock_ms": 688.89
+        },
+        {
+          "request": 61,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1462.493,
+          "admission_ms": 741.884,
+          "principal_lock_ms": 728.215
+        },
+        {
+          "request": 62,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1563.34,
+          "admission_ms": 766.682,
+          "principal_lock_ms": 749.871
+        },
+        {
+          "request": 63,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1471.149,
+          "admission_ms": 680.079,
+          "principal_lock_ms": 664.962
+        },
+        {
+          "request": 64,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1575.248,
+          "admission_ms": 764.289,
+          "principal_lock_ms": 746.944
+        },
+        {
+          "request": 65,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1542.768,
+          "admission_ms": 731.6,
+          "principal_lock_ms": 657.615
+        },
+        {
+          "request": 66,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1586.394,
+          "admission_ms": 755.38,
+          "principal_lock_ms": 739.704
+        },
+        {
+          "request": 67,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1598.119,
+          "admission_ms": 768.909,
+          "principal_lock_ms": 754.056
+        },
+        {
+          "request": 68,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1612.861,
+          "admission_ms": 759.098,
+          "principal_lock_ms": 743.221
+        },
+        {
+          "request": 69,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1711.908,
+          "admission_ms": 860.12,
+          "principal_lock_ms": 839.954
+        },
+        {
+          "request": 70,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1622.891,
+          "admission_ms": 746.042,
+          "principal_lock_ms": 730.127
+        },
+        {
+          "request": 71,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1752.102,
+          "admission_ms": 878.417,
+          "principal_lock_ms": 860.941
+        },
+        {
+          "request": 72,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1635.552,
+          "admission_ms": 741.336,
+          "principal_lock_ms": 725.414
+        },
+        {
+          "request": 73,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1760.427,
+          "admission_ms": 870.42,
+          "principal_lock_ms": 856.185
+        },
+        {
+          "request": 74,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1647.073,
+          "admission_ms": 740.735,
+          "principal_lock_ms": 721.692
+        },
+        {
+          "request": 75,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1770.687,
+          "admission_ms": 865.233,
+          "principal_lock_ms": 852.033
+        },
+        {
+          "request": 76,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1662.671,
+          "admission_ms": 742.551,
+          "principal_lock_ms": 723.943
+        },
+        {
+          "request": 77,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1793.7,
+          "admission_ms": 874.827,
+          "principal_lock_ms": 861.888
+        },
+        {
+          "request": 78,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1674.653,
+          "admission_ms": 746.027,
+          "principal_lock_ms": 729.848
+        },
+        {
+          "request": 79,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1801.929,
+          "admission_ms": 875.728,
+          "principal_lock_ms": 862.357
+        },
+        {
+          "request": 80,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1708.468,
+          "admission_ms": 771.908,
+          "principal_lock_ms": 755.374
+        },
+        {
+          "request": 81,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1807.712,
+          "admission_ms": 873.037,
+          "principal_lock_ms": 862.347
+        },
+        {
+          "request": 82,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1718.254,
+          "admission_ms": 780.345,
+          "principal_lock_ms": 764.156
+        },
+        {
+          "request": 83,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1827.343,
+          "admission_ms": 891.353,
+          "principal_lock_ms": 880.566
+        },
+        {
+          "request": 84,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1768.768,
+          "admission_ms": 829.41,
+          "principal_lock_ms": 816.484
+        },
+        {
+          "request": 85,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1833.161,
+          "admission_ms": 895.36,
+          "principal_lock_ms": 885.107
+        },
+        {
+          "request": 86,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1812.812,
+          "admission_ms": 871.795,
+          "principal_lock_ms": 859.707
+        },
+        {
+          "request": 87,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1863.311,
+          "admission_ms": 921.365,
+          "principal_lock_ms": 910.609
+        },
+        {
+          "request": 88,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1840.851,
+          "admission_ms": 896.37,
+          "principal_lock_ms": 884.618
+        },
+        {
+          "request": 89,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1870.094,
+          "admission_ms": 926.742,
+          "principal_lock_ms": 915.126
+        },
+        {
+          "request": 90,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1848.067,
+          "admission_ms": 902.047,
+          "principal_lock_ms": 891.317
+        },
+        {
+          "request": 91,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1876.879,
+          "admission_ms": 933.5,
+          "principal_lock_ms": 921.601
+        },
+        {
+          "request": 92,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1901.198,
+          "admission_ms": 956.666,
+          "principal_lock_ms": 945.586
+        },
+        {
+          "request": 93,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1881.498,
+          "admission_ms": 938.819,
+          "principal_lock_ms": 929.241
+        },
+        {
+          "request": 94,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1906.833,
+          "admission_ms": 962.769,
+          "principal_lock_ms": 953.046
+        },
+        {
+          "request": 95,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1886.045,
+          "admission_ms": 943.187,
+          "principal_lock_ms": 935.485
+        },
+        {
+          "request": 96,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1913.055,
+          "admission_ms": 968.99,
+          "principal_lock_ms": 959.034
+        },
+        {
+          "request": 97,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1919.91,
+          "admission_ms": 977.329,
+          "principal_lock_ms": 968.927
+        },
+        {
+          "request": 98,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1927.632,
+          "admission_ms": 985.852,
+          "principal_lock_ms": 975.236
+        },
+        {
+          "request": 99,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "DAILY_BUDGET_EXHAUSTED",
+          "elapsed_ms": 1935.155,
+          "admission_ms": 993.586,
+          "principal_lock_ms": 984.438
+        }
+      ],
+      "tool_journal": [
+        {
+          "operation_id": "336dd2fb-feb9-43c2-8a7f-74df8b2e1bcb",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:24.482398+00:00",
+          "completed_at": "2026-09-29T09:08:25.574730+00:00",
+          "wall_duration_ms": 1092.332,
+          "start_monotonic_ns": 30811843000000,
+          "terminal_monotonic_ns": 30812953000000,
+          "duration_ms": 1110.0
+        },
+        {
+          "operation_id": "d151997a-1cd6-4d11-a8a2-1e0a06031cd9",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:23.763270+00:00",
+          "completed_at": "2026-09-29T09:08:25.559039+00:00",
+          "wall_duration_ms": 1795.769,
+          "start_monotonic_ns": 30811125000000,
+          "terminal_monotonic_ns": 30812937000000,
+          "duration_ms": 1812.0
+        },
+        {
+          "operation_id": "6933f615-3618-46b7-89c6-d23494748b61",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:23.581600+00:00",
+          "completed_at": "2026-09-29T09:08:25.578049+00:00",
+          "wall_duration_ms": 1996.449,
+          "start_monotonic_ns": 30810937000000,
+          "terminal_monotonic_ns": 30812968000000,
+          "duration_ms": 2031.0
+        }
+      ],
+      "tool_events": [
+        {
+          "operation_id": "6933f615-3618-46b7-89c6-d23494748b61",
+          "event": "started",
+          "time_ns": 30810937000000,
+          "seq": 1
+        },
+        {
+          "operation_id": "d151997a-1cd6-4d11-a8a2-1e0a06031cd9",
+          "event": "started",
+          "time_ns": 30811125000000,
+          "seq": 2
+        },
+        {
+          "operation_id": "336dd2fb-feb9-43c2-8a7f-74df8b2e1bcb",
+          "event": "started",
+          "time_ns": 30811843000000,
+          "seq": 3
+        },
+        {
+          "operation_id": "d151997a-1cd6-4d11-a8a2-1e0a06031cd9",
+          "event": "terminal",
+          "time_ns": 30812937000000,
+          "seq": 4
+        },
+        {
+          "operation_id": "336dd2fb-feb9-43c2-8a7f-74df8b2e1bcb",
+          "event": "terminal",
+          "time_ns": 30812953000000,
+          "seq": 5
+        },
+        {
+          "operation_id": "6933f615-3618-46b7-89c6-d23494748b61",
+          "event": "terminal",
+          "time_ns": 30812968000000,
+          "seq": 6
+        }
+      ],
+      "wall_clock_regressions": 0
+    },
+    {
+      "scenario": "concurrency-two-race",
+      "requests": 100,
+      "daily_limit": 100,
+      "max_inflight": 2,
+      "barrier_held": 2,
+      "counts": {
+        "succeeded": 2,
+        "CONCURRENCY_EXHAUSTED": 98
+      },
+      "admitted": 2,
+      "tool_started": 2,
+      "tool_peak": 2,
+      "end_inflight": 0,
+      "wall_seconds": 3.381,
+      "latency_ms": {
+        "p50": 1751.083,
+        "p95": 2561.151
+      },
+      "admission_ms": {
+        "p50": 979.406,
+        "p95": 1545.613
+      },
+      "principal_lock_ms": {
+        "p50": 964.423,
+        "p95": 1444.204
+      },
+      "tool_duration_ms": {
+        "p50": 2641.0,
+        "p95": 2703.0
+      },
+      "raw_requests": [
+        {
+          "request": 0,
+          "api_process": 0,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 3200.761,
+          "admission_ms": 57.793,
+          "principal_lock_ms": 15.023
+        },
+        {
+          "request": 1,
+          "api_process": 1,
+          "http_status": 200,
+          "classification": "succeeded",
+          "elapsed_ms": 3181.941,
+          "admission_ms": 100.938,
+          "principal_lock_ms": 53.565
+        },
+        {
+          "request": 2,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 766.428,
+          "admission_ms": 351.673,
+          "principal_lock_ms": 320.456
+        },
+        {
+          "request": 3,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 746.762,
+          "admission_ms": 322.473,
+          "principal_lock_ms": 180.234
+        },
+        {
+          "request": 4,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 688.049,
+          "admission_ms": 130.915,
+          "principal_lock_ms": 35.008
+        },
+        {
+          "request": 5,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 809.8,
+          "admission_ms": 388.199,
+          "principal_lock_ms": 358.558
+        },
+        {
+          "request": 6,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 854.374,
+          "admission_ms": 391.467,
+          "principal_lock_ms": 370.358
+        },
+        {
+          "request": 7,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 784.991,
+          "admission_ms": 295.2,
+          "principal_lock_ms": 264.732
+        },
+        {
+          "request": 8,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 831.4,
+          "admission_ms": 374.976,
+          "principal_lock_ms": 350.665
+        },
+        {
+          "request": 9,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 876.113,
+          "admission_ms": 408.696,
+          "principal_lock_ms": 387.446
+        },
+        {
+          "request": 10,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 859.024,
+          "admission_ms": 403.453,
+          "principal_lock_ms": 381.084
+        },
+        {
+          "request": 11,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 925.824,
+          "admission_ms": 469.681,
+          "principal_lock_ms": 449.573
+        },
+        {
+          "request": 12,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 883.811,
+          "admission_ms": 419.71,
+          "principal_lock_ms": 398.095
+        },
+        {
+          "request": 13,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 892.808,
+          "admission_ms": 439.089,
+          "principal_lock_ms": 420.405
+        },
+        {
+          "request": 14,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 943.938,
+          "admission_ms": 463.508,
+          "principal_lock_ms": 445.392
+        },
+        {
+          "request": 15,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 969.696,
+          "admission_ms": 484.021,
+          "principal_lock_ms": 464.589
+        },
+        {
+          "request": 16,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1024.111,
+          "admission_ms": 495.416,
+          "principal_lock_ms": 477.645
+        },
+        {
+          "request": 17,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1031.936,
+          "admission_ms": 508.305,
+          "principal_lock_ms": 488.415
+        },
+        {
+          "request": 18,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 982.404,
+          "admission_ms": 461.74,
+          "principal_lock_ms": 441.784
+        },
+        {
+          "request": 19,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1063.837,
+          "admission_ms": 577.272,
+          "principal_lock_ms": 552.669
+        },
+        {
+          "request": 20,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 915.793,
+          "admission_ms": 386.197,
+          "principal_lock_ms": 366.485
+        },
+        {
+          "request": 21,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1031.84,
+          "admission_ms": 482.63,
+          "principal_lock_ms": 463.651
+        },
+        {
+          "request": 22,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1036.699,
+          "admission_ms": 500.8,
+          "principal_lock_ms": 478.956
+        },
+        {
+          "request": 23,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1063.887,
+          "admission_ms": 562.959,
+          "principal_lock_ms": 536.904
+        },
+        {
+          "request": 24,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1039.23,
+          "admission_ms": 478.931,
+          "principal_lock_ms": 459.185
+        },
+        {
+          "request": 25,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1071.35,
+          "admission_ms": 544.094,
+          "principal_lock_ms": 515.661
+        },
+        {
+          "request": 26,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1106.476,
+          "admission_ms": 517.554,
+          "principal_lock_ms": 497.342
+        },
+        {
+          "request": 27,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1128.505,
+          "admission_ms": 539.014,
+          "principal_lock_ms": 516.535
+        },
+        {
+          "request": 28,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1226.122,
+          "admission_ms": 610.47,
+          "principal_lock_ms": 545.215
+        },
+        {
+          "request": 29,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1083.437,
+          "admission_ms": 478.156,
+          "principal_lock_ms": 457.884
+        },
+        {
+          "request": 30,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1160.139,
+          "admission_ms": 534.305,
+          "principal_lock_ms": 499.937
+        },
+        {
+          "request": 31,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1248.805,
+          "admission_ms": 625.426,
+          "principal_lock_ms": 594.016
+        },
+        {
+          "request": 32,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1322.13,
+          "admission_ms": 682.486,
+          "principal_lock_ms": 609.69
+        },
+        {
+          "request": 33,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1402.109,
+          "admission_ms": 761.06,
+          "principal_lock_ms": 715.723
+        },
+        {
+          "request": 34,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1505.583,
+          "admission_ms": 855.561,
+          "principal_lock_ms": 829.14
+        },
+        {
+          "request": 35,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1350.166,
+          "admission_ms": 702.428,
+          "principal_lock_ms": 664.056
+        },
+        {
+          "request": 36,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1524.372,
+          "admission_ms": 854.285,
+          "principal_lock_ms": 828.493
+        },
+        {
+          "request": 37,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1471.828,
+          "admission_ms": 805.861,
+          "principal_lock_ms": 720.198
+        },
+        {
+          "request": 38,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1541.503,
+          "admission_ms": 861.149,
+          "principal_lock_ms": 837.047
+        },
+        {
+          "request": 39,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1577.25,
+          "admission_ms": 901.116,
+          "principal_lock_ms": 880.874
+        },
+        {
+          "request": 40,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1556.896,
+          "admission_ms": 864.448,
+          "principal_lock_ms": 841.252
+        },
+        {
+          "request": 41,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1614.012,
+          "admission_ms": 923.146,
+          "principal_lock_ms": 900.843
+        },
+        {
+          "request": 42,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1591.061,
+          "admission_ms": 884.494,
+          "principal_lock_ms": 865.217
+        },
+        {
+          "request": 43,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1629.368,
+          "admission_ms": 925.025,
+          "principal_lock_ms": 903.898
+        },
+        {
+          "request": 44,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1645.544,
+          "admission_ms": 927.822,
+          "principal_lock_ms": 908.53
+        },
+        {
+          "request": 45,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1684.62,
+          "admission_ms": 967.287,
+          "principal_lock_ms": 950.026
+        },
+        {
+          "request": 46,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1665.969,
+          "admission_ms": 935.388,
+          "principal_lock_ms": 910.319
+        },
+        {
+          "request": 47,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1731.63,
+          "admission_ms": 1002.438,
+          "principal_lock_ms": 984.095
+        },
+        {
+          "request": 48,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1696.24,
+          "admission_ms": 951.946,
+          "principal_lock_ms": 933.747
+        },
+        {
+          "request": 49,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1742.292,
+          "admission_ms": 999.169,
+          "principal_lock_ms": 984.053
+        },
+        {
+          "request": 50,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1708.836,
+          "admission_ms": 949.881,
+          "principal_lock_ms": 933.234
+        },
+        {
+          "request": 51,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1781.181,
+          "admission_ms": 1025.828,
+          "principal_lock_ms": 1010.639
+        },
+        {
+          "request": 52,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1751.083,
+          "admission_ms": 981.576,
+          "principal_lock_ms": 964.823
+        },
+        {
+          "request": 53,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1795.935,
+          "admission_ms": 1028.299,
+          "principal_lock_ms": 1007.919
+        },
+        {
+          "request": 54,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1761.375,
+          "admission_ms": 979.406,
+          "principal_lock_ms": 964.423
+        },
+        {
+          "request": 55,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1811.406,
+          "admission_ms": 1028.939,
+          "principal_lock_ms": 1010.914
+        },
+        {
+          "request": 56,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1840.676,
+          "admission_ms": 1048.104,
+          "principal_lock_ms": 1031.504
+        },
+        {
+          "request": 57,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1821.651,
+          "admission_ms": 1032.161,
+          "principal_lock_ms": 1015.97
+        },
+        {
+          "request": 58,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1867.352,
+          "admission_ms": 1065.05,
+          "principal_lock_ms": 1048.584
+        },
+        {
+          "request": 59,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1849.773,
+          "admission_ms": 1048.655,
+          "principal_lock_ms": 1033.204
+        },
+        {
+          "request": 60,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1888.957,
+          "admission_ms": 1077.602,
+          "principal_lock_ms": 1050.044
+        },
+        {
+          "request": 61,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1910.435,
+          "admission_ms": 1099.061,
+          "principal_lock_ms": 1075.784
+        },
+        {
+          "request": 62,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1933.938,
+          "admission_ms": 1109.7,
+          "principal_lock_ms": 1085.076
+        },
+        {
+          "request": 63,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1953.127,
+          "admission_ms": 1132.344,
+          "principal_lock_ms": 1109.012
+        },
+        {
+          "request": 64,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2014.659,
+          "admission_ms": 1183.033,
+          "principal_lock_ms": 1165.203
+        },
+        {
+          "request": 65,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1980.246,
+          "admission_ms": 1148.259,
+          "principal_lock_ms": 1117.312
+        },
+        {
+          "request": 66,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2025.261,
+          "admission_ms": 1186.924,
+          "principal_lock_ms": 1170.949
+        },
+        {
+          "request": 67,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 1992.721,
+          "admission_ms": 1154.506,
+          "principal_lock_ms": 1133.876
+        },
+        {
+          "request": 68,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2033.857,
+          "admission_ms": 1185.634,
+          "principal_lock_ms": 1170.808
+        },
+        {
+          "request": 69,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2059.523,
+          "admission_ms": 1213.424,
+          "principal_lock_ms": 1196.67
+        },
+        {
+          "request": 70,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2042.324,
+          "admission_ms": 1182.806,
+          "principal_lock_ms": 1169.821
+        },
+        {
+          "request": 71,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2081.833,
+          "admission_ms": 1224.538,
+          "principal_lock_ms": 1210.773
+        },
+        {
+          "request": 72,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2066.496,
+          "admission_ms": 1194.821,
+          "principal_lock_ms": 1182.052
+        },
+        {
+          "request": 73,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2087.984,
+          "admission_ms": 1217.344,
+          "principal_lock_ms": 1206.032
+        },
+        {
+          "request": 74,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2098.92,
+          "admission_ms": 1211.321,
+          "principal_lock_ms": 1198.512
+        },
+        {
+          "request": 75,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2119.825,
+          "admission_ms": 1232.721,
+          "principal_lock_ms": 1220.72
+        },
+        {
+          "request": 76,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2105.331,
+          "admission_ms": 1204.654,
+          "principal_lock_ms": 1192.803
+        },
+        {
+          "request": 77,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2156.629,
+          "admission_ms": 1258.009,
+          "principal_lock_ms": 1242.557
+        },
+        {
+          "request": 78,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2128.645,
+          "admission_ms": 1220.673,
+          "principal_lock_ms": 1205.913
+        },
+        {
+          "request": 79,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2168.298,
+          "admission_ms": 1261.016,
+          "principal_lock_ms": 1245.667
+        },
+        {
+          "request": 80,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2136.367,
+          "admission_ms": 1220.961,
+          "principal_lock_ms": 1207.658
+        },
+        {
+          "request": 81,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2211.637,
+          "admission_ms": 1298.097,
+          "principal_lock_ms": 1281.551
+        },
+        {
+          "request": 82,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2177.748,
+          "admission_ms": 1259.286,
+          "principal_lock_ms": 1243.078
+        },
+        {
+          "request": 83,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2226.269,
+          "admission_ms": 1306.722,
+          "principal_lock_ms": 1290.464
+        },
+        {
+          "request": 84,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2191.393,
+          "admission_ms": 1268.489,
+          "principal_lock_ms": 1251.447
+        },
+        {
+          "request": 85,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2238.546,
+          "admission_ms": 1318.221,
+          "principal_lock_ms": 1297.544
+        },
+        {
+          "request": 86,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2269.08,
+          "admission_ms": 1345.439,
+          "principal_lock_ms": 1327.658
+        },
+        {
+          "request": 87,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2252.82,
+          "admission_ms": 1327.671,
+          "principal_lock_ms": 1309.616
+        },
+        {
+          "request": 88,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2299.962,
+          "admission_ms": 1372.715,
+          "principal_lock_ms": 1355.431
+        },
+        {
+          "request": 89,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2282.259,
+          "admission_ms": 1354.656,
+          "principal_lock_ms": 1337.251
+        },
+        {
+          "request": 90,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2313.05,
+          "admission_ms": 1385.178,
+          "principal_lock_ms": 1367.725
+        },
+        {
+          "request": 91,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2337.542,
+          "admission_ms": 1409.017,
+          "principal_lock_ms": 1383.545
+        },
+        {
+          "request": 92,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2357.585,
+          "admission_ms": 1426.45,
+          "principal_lock_ms": 1404.506
+        },
+        {
+          "request": 93,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2376.853,
+          "admission_ms": 1448.883,
+          "principal_lock_ms": 1426.336
+        },
+        {
+          "request": 94,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2561.151,
+          "admission_ms": 1628.896,
+          "principal_lock_ms": 1576.817
+        },
+        {
+          "request": 95,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2475.326,
+          "admission_ms": 1545.613,
+          "principal_lock_ms": 1444.204
+        },
+        {
+          "request": 96,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2578.865,
+          "admission_ms": 1651.718,
+          "principal_lock_ms": 1626.476
+        },
+        {
+          "request": 97,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2504.915,
+          "admission_ms": 1576.418,
+          "principal_lock_ms": 1543.372
+        },
+        {
+          "request": 98,
+          "api_process": 0,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2601.119,
+          "admission_ms": 1674.308,
+          "principal_lock_ms": 1649.168
+        },
+        {
+          "request": 99,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 2619.505,
+          "admission_ms": 1696.552,
+          "principal_lock_ms": 1673.447
+        }
+      ],
+      "tool_journal": [
+        {
+          "operation_id": "a308f131-5643-49e3-845c-6b95e01db63a",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:34.475606+00:00",
+          "completed_at": "2026-09-29T09:08:36.878955+00:00",
+          "wall_duration_ms": 2403.349,
+          "start_monotonic_ns": 30822484000000,
+          "terminal_monotonic_ns": 30825125000000,
+          "duration_ms": 2641.0
+        },
+        {
+          "operation_id": "aa7af68b-f534-4731-968d-98516ee91bf6",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:34.427846+00:00",
+          "completed_at": "2026-09-29T09:08:36.896147+00:00",
+          "wall_duration_ms": 2468.301,
+          "start_monotonic_ns": 30822437000000,
+          "terminal_monotonic_ns": 30825140000000,
+          "duration_ms": 2703.0
+        }
+      ],
+      "tool_events": [
+        {
+          "operation_id": "aa7af68b-f534-4731-968d-98516ee91bf6",
+          "event": "started",
+          "time_ns": 30822437000000,
+          "seq": 1
+        },
+        {
+          "operation_id": "a308f131-5643-49e3-845c-6b95e01db63a",
+          "event": "started",
+          "time_ns": 30822484000000,
+          "seq": 2
+        },
+        {
+          "operation_id": "a308f131-5643-49e3-845c-6b95e01db63a",
+          "event": "terminal",
+          "time_ns": 30825125000000,
+          "seq": 3
+        },
+        {
+          "operation_id": "aa7af68b-f534-4731-968d-98516ee91bf6",
+          "event": "terminal",
+          "time_ns": 30825140000000,
+          "seq": 4
+        }
+      ],
+      "wall_clock_regressions": 0
+    },
+    {
+      "scenario": "terminal-response-lost",
+      "requests": 2,
+      "daily_limit": 10,
+      "max_inflight": 1,
+      "barrier_held": 1,
+      "counts": {
+        "unknown": 1,
+        "CONCURRENCY_EXHAUSTED": 1
+      },
+      "admitted": 1,
+      "tool_started": 1,
+      "tool_peak": 1,
+      "end_inflight": 0,
+      "wall_seconds": 0.584,
+      "latency_ms": {
+        "p50": 45.835,
+        "p95": 201.544
+      },
+      "admission_ms": {
+        "p50": 39.947,
+        "p95": 66.625
+      },
+      "principal_lock_ms": {
+        "p50": 11.448,
+        "p95": 12.139
+      },
+      "tool_duration_ms": {
+        "p50": 16.0,
+        "p95": 16.0
+      },
+      "raw_requests": [
+        {
+          "request": 0,
+          "api_process": 0,
+          "http_status": 202,
+          "classification": "unknown",
+          "elapsed_ms": 201.544,
+          "admission_ms": 66.625,
+          "principal_lock_ms": 11.448
+        },
+        {
+          "request": 1,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 45.835,
+          "admission_ms": 39.947,
+          "principal_lock_ms": 12.139
+        }
+      ],
+      "tool_journal": [
+        {
+          "operation_id": "44dd67ff-24c2-450d-ab10-435129288dbc",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:44.404142+00:00",
+          "completed_at": "2026-09-29T09:08:44.418509+00:00",
+          "wall_duration_ms": 14.367,
+          "start_monotonic_ns": 30833312000000,
+          "terminal_monotonic_ns": 30833328000000,
+          "duration_ms": 16.0
+        }
+      ],
+      "tool_events": [
+        {
+          "operation_id": "44dd67ff-24c2-450d-ab10-435129288dbc",
+          "event": "started",
+          "time_ns": 30833312000000,
+          "seq": 1
+        },
+        {
+          "operation_id": "44dd67ff-24c2-450d-ab10-435129288dbc",
+          "event": "terminal",
+          "time_ns": 30833328000000,
+          "seq": 2
+        }
+      ],
+      "wall_clock_regressions": 0,
+      "readonly_reconciliations": 5,
+      "release_audits": 1
+    },
+    {
+      "scenario": "api-process-killed",
+      "requests": 1,
+      "daily_limit": 10,
+      "max_inflight": 1,
+      "barrier_held": 1,
+      "counts": {
+        "CONCURRENCY_EXHAUSTED": 1
+      },
+      "admitted": 1,
+      "tool_started": 1,
+      "tool_peak": 1,
+      "end_inflight": 0,
+      "wall_seconds": 0.565,
+      "latency_ms": {
+        "p50": 60.54,
+        "p95": 60.54
+      },
+      "admission_ms": {
+        "p50": 51.493,
+        "p95": 51.493
+      },
+      "principal_lock_ms": {
+        "p50": 10.189,
+        "p95": 10.189
+      },
+      "tool_duration_ms": {
+        "p50": 297.0,
+        "p95": 297.0
+      },
+      "raw_requests": [
+        {
+          "request": 1,
+          "api_process": 1,
+          "http_status": 429,
+          "classification": "CONCURRENCY_EXHAUSTED",
+          "elapsed_ms": 60.54,
+          "admission_ms": 51.493,
+          "principal_lock_ms": 10.189
+        }
+      ],
+      "tool_journal": [
+        {
+          "operation_id": "251392b7-850a-4807-abf3-e41438fc00bb",
+          "state": "succeeded",
+          "started_at": "2026-09-29T09:08:53.313262+00:00",
+          "completed_at": "2026-09-29T09:08:53.554695+00:00",
+          "wall_duration_ms": 241.433,
+          "start_monotonic_ns": 30840968000000,
+          "terminal_monotonic_ns": 30841265000000,
+          "duration_ms": 297.0
+        }
+      ],
+      "tool_events": [
+        {
+          "operation_id": "251392b7-850a-4807-abf3-e41438fc00bb",
+          "event": "started",
+          "time_ns": 30840968000000,
+          "seq": 1
+        },
+        {
+          "operation_id": "251392b7-850a-4807-abf3-e41438fc00bb",
+          "event": "terminal",
+          "time_ns": 30841265000000,
+          "seq": 2
+        }
+      ],
+      "wall_clock_regressions": 0,
+      "killed_api_requests": 1,
+      "release_audits": 1
+    }
+  ]
+}

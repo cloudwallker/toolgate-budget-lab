@@ -1,0 +1,87 @@
+name: toolgate-lab
+x-gateway-environment: &gateway-environment
+  DATABASE_URL: postgresql+psycopg://toolgate_gateway:${GATEWAY_DB_PASSWORD:?Run bootstrap first}@postgres:5432/toolgate_dev
+  TOOL_BASE_URL: http://tools:58083
+  TOOL_INTERNAL_KEY: ${TOOL_INTERNAL_KEY:?Run bootstrap first}
+  PRINCIPAL_KEYS: '{"${ALPHA_KEY:?Run bootstrap first}":"alpha","${BETA_KEY:?Run bootstrap first}":"beta"}'
+x-api: &api
+  build: .
+  environment: *gateway-environment
+  command: ["serve-api", "--host", "0.0.0.0", "--port", "58081"]
+  healthcheck:
+    test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:58081/health/ready', timeout=2)"]
+    interval: 2s
+    timeout: 3s
+    retries: 30
+  depends_on:
+    seed:
+      condition: service_completed_successfully
+    tools:
+      condition: service_healthy
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run scripts/bootstrap.ps1 first}
+      POSTGRES_DB: toolgate_dev
+      GATEWAY_DB_PASSWORD: ${GATEWAY_DB_PASSWORD:?Run bootstrap first}
+      TOOLS_DB_PASSWORD: ${TOOLS_DB_PASSWORD:?Run bootstrap first}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-55438}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/01_roles.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d toolgate_dev"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  migrate:
+    build: .
+    environment: *gateway-environment
+    command: ["migrate"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+  init-tools:
+    build: .
+    environment:
+      TOOLS_DATABASE_URL: postgresql+psycopg://toolgate_tools:${TOOLS_DB_PASSWORD:?Run bootstrap first}@postgres:5432/toolgate_dev
+    command: ["init-tools"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+  seed:
+    build: .
+    environment: *gateway-environment
+    command: ["seed", "--daily-limit", "3", "--max-inflight", "2"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+  tools:
+    build: .
+    environment:
+      TOOLS_DATABASE_URL: postgresql+psycopg://toolgate_tools:${TOOLS_DB_PASSWORD:?Run bootstrap first}@postgres:5432/toolgate_dev
+      TOOLS_INTERNAL_KEY: ${TOOL_INTERNAL_KEY:?Run bootstrap first}
+    command: ["serve-tools", "--host", "0.0.0.0", "--port", "58083"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:58083/openapi.json', timeout=2)"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    ports:
+      - "127.0.0.1:${TOOLS_PORT:-58083}:58083"
+    depends_on:
+      init-tools:
+        condition: service_completed_successfully
+  api-a:
+    <<: *api
+    ports:
+      - "127.0.0.1:${API_A_PORT:-58081}:58081"
+  api-b:
+    <<: *api
+    ports:
+      - "127.0.0.1:${API_B_PORT:-58082}:58081"
+volumes:
+  postgres_data:

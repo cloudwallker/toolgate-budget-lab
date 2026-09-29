@@ -1,0 +1,26 @@
+name: correctness
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  postgres-process-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
+        with:
+          version: "0.9.8"
+          python-version: "3.12.12"
+          enable-cache: true
+      - run: uv sync --frozen
+      - run: uv run python scripts/bootstrap.py
+      - run: docker compose up -d --wait postgres
+      - run: uv run ruff check . && uv run ruff format --check .
+      - run: uv run python scripts/run_tests.py
+      - run: docker compose up -d --build --wait
+      - run: curl --fail http://127.0.0.1:58081/health/ready && curl --fail http://127.0.0.1:58082/health/ready
+      - if: always()
+        run: docker compose down
