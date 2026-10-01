@@ -12,6 +12,8 @@
 
 *已实现 HTTP 实验的架构示意。网关与工具 schema 分别由独立数据库角色管理。*
 
+![toolgate-budget-lab](assets/cartoon-infographic.png)
+
 ## 功能
 
 - **按身份计额：** Bearer Key 在服务端映射为 principal，工具采用固定允许列表。每个身份独立计算 UTC 日额度和跨日并发占位。

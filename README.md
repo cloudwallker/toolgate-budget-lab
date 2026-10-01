@@ -12,6 +12,8 @@ English | [中文](README_ZH.md)
 
 *Architecture diagram of the implemented HTTP lab. Each schema has a separate database owner.*
 
+![toolgate-budget-lab](assets/cartoon-infographic.png)
+
 ## Features
 
 - **Authenticated budgets:** server-side Bearer keys bind callers to principals and fixed tool allowlists. UTC daily admission limits and held-call concurrency are independent per principal.
