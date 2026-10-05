@@ -1,6 +1,6 @@
 # ToolGate Budget Lab
 
-### Correct tool-call budgets across agent backend processes
+### Shared tool-call budgets with PostgreSQL admission and recovery
 
 **Reproduce quota races and failure recovery with two API processes, real PostgreSQL, and a durable read-only tool service. Check that uncertain calls keep their slots and terminal evidence releases them once.**
 
@@ -76,7 +76,7 @@ Tests use the separate `toolgate_test` database, random principals, and owned su
 
 The load script starts two API processes and one tool process on temporary loopback ports. It runs normal calls, daily quota races, concurrency races, terminal response loss, and an API process kill. It does not consume the development principals' budgets.
 
-Published sample: 64 local tests passed; fresh-volume startup and cross-API replay passed. In the 100-request races, the daily limit of 3 admitted 3 calls, and the concurrency limit of 2 admitted 2 while the tool barrier held. See the [sample report](docs/reports/load-report.md) and [sanitized raw data](artifacts/load-results.json) for the measured environment and timing definitions. These are local correctness experiments, not production throughput claims.
+Published sample: 64 local tests passed; fresh-volume startup and cross-API replay passed. In the 100-request races, the daily limit of 3 admitted 3 calls, and the concurrency limit of 2 admitted 2 while the tool barrier held. See the [sample report](docs/reports/load-report.md) and [sanitized raw data](artifacts/load-results.json) for the measured environment and timing definitions. The sample evaluates quota correctness and recovery in controlled local process experiments.
 
 Controlled recovery commands:
 
@@ -101,7 +101,7 @@ Detailed guides currently use Chinese. The GitHub Actions workflow runs database
 
 The lab assumes all tool starts pass through the gateway, one admission starts at most one operation, and the upstream terminal journal is trustworthy. HTTP dispatch requires an acknowledged database commit, with no automatic retry or redirect. Only a matching terminal operation releases a dispatched call; an unclaimed reservation can be aborted under the same lock and state check.
 
-An unknown call may hold its slot indefinitely if the tool cannot supply terminal evidence. This HTTP lab does not claim MCP compatibility, distributed exactly-once execution, arbitrary tool safety, or production deployment readiness. Tools and gateway write separate schemas and communicate through the fixed HTTP protocol.
+An unknown call may hold its slot indefinitely if the tool cannot supply terminal evidence. The implemented integration covers `catalog.lookup` and `catalog.summary` over a fixed HTTP protocol. Tools and gateway write separate schemas; admission and occupancy behavior is evaluated under the assumptions above.
 
 ## License
 

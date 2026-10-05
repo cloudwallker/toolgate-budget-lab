@@ -1,6 +1,6 @@
 # ToolGate Budget Lab
 
-### 跨 Agent 后端进程的工具调用预算实验
+### 基于 PostgreSQL 准入与恢复的跨进程工具调用预算
 
 **用两个 API 进程、真实 PostgreSQL 和持久只读工具服务复现额度争抢与故障恢复，验证未知调用保留占位、可信终态只释放一次。**
 
@@ -76,7 +76,7 @@ uv run python scripts/load_lab.py --requests 100
 
 负载脚本在临时本机端口启动两个 API 进程和一个工具进程，演示正常调用、日额度竞争、并发竞争、终态响应丢失和 API 强杀，不消耗开发账号额度。
 
-发布样本：64 项本地测试通过；全新卷启动和跨 API 重放通过。100 请求争抢中，日额 3 只准入 3 次，并发上限 2 在工具屏障挂起期间只准入 2 次。[负载报告](docs/reports/load-report.md)与[脱敏原始数据](artifacts/load-results.json)记录环境和计时定义。单机正确性实验不代表生产吞吐。
+发布样本：64 项本地测试通过；全新卷启动和跨 API 重放通过。100 请求争抢中，日额 3 只准入 3 次，并发上限 2 在工具屏障挂起期间只准入 2 次。[负载报告](docs/reports/load-report.md)与[脱敏原始数据](artifacts/load-results.json)记录环境和计时定义。样本评价受控本机进程实验中的额度正确性与故障恢复。
 
 受控恢复命令：
 
@@ -101,7 +101,7 @@ docker compose run --rm api-a reconcile --reserved --limit 100
 
 实验假设所有工具执行经过网关、每次准入最多启动一个操作、上游终态日志可信。发送 HTTP 前必须确认数据库事务提交，关闭自动重试和重定向。已经取得发送权的调用，只凭匹配终态释放；未取得发送权的 reserved 可在同一锁和状态检查下安全终止。
 
-工具无法提供终态时，unknown 可能长期占位。HTTP 首版不声明 MCP 兼容、分布式 exactly-once、任意工具安全或生产部署就绪。网关和工具写入独立 schema，通过固定 HTTP 协议通信。
+工具无法提供终态时，unknown 可能长期占位。已实现的集成通过固定 HTTP 协议提供 `catalog.lookup` 与 `catalog.summary`。网关和工具写入独立 schema，准入和占位行为在上述实验假设下评价。
 
 ## 许可证
 
