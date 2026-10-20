@@ -37,9 +37,14 @@ class Settings:
             raise ValueError("DATABASE_URL requires PostgreSQL psycopg")
         base_url = values["TOOL_BASE_URL"].rstrip("/")
         url = urlsplit(base_url)
+        try:
+            port = url.port
+        except ValueError:
+            raise ValueError("invalid fixed tool base URL") from None
         if (
             url.scheme not in {"http", "https"}
             or not url.hostname
+            or port == 0
             or url.username
             or url.password
             or url.query

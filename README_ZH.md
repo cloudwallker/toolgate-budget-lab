@@ -45,6 +45,8 @@ API A：`http://127.0.0.1:58081`；API B：`http://127.0.0.1:58082`；工具服�
 
 就绪检查：`GET /health/ready`。演示账号 `alpha` 可用两个工具，`beta` 只可用 lookup；各有日额度 3、并发上限 2。Key 位于忽略的本地 `.env`，示例配置只有占位符。
 
+启动时会校验 `TOOL_BASE_URL`，显式端口必须是 `1` 至 `65535` 的整数；无效端口会在派发工具调用前以通用配置错误拒绝。
+
 ```http
 POST /v1/calls
 Authorization: Bearer <ALPHA_KEY>

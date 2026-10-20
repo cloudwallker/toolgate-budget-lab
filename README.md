@@ -45,6 +45,8 @@ API A: `http://127.0.0.1:58081` · API B: `http://127.0.0.1:58082` · tool servi
 
 Readiness: `GET /health/ready`. The demo principal `alpha` can use both tools; `beta` can use lookup. Each has a daily limit of 3 and concurrency limit of 2. Keys are in your ignored local `.env`; the sample configuration contains placeholders only.
 
+`TOOL_BASE_URL` is validated at startup; explicit ports must be integers from `1` through `65535`. Invalid ports are rejected with a generic configuration error before a tool call is dispatched.
+
 ```http
 POST /v1/calls
 Authorization: Bearer <ALPHA_KEY>

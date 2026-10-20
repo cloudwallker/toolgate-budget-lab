@@ -37,3 +37,17 @@ def test_non_postgres_database_and_unsafe_base_url_are_rejected():
     for url in ["file:///etc", "http://user:pass@host", "http://host/path?token=secret"]:
         with pytest.raises(ValueError):
             Settings.from_env({**environment(), "TOOL_BASE_URL": url})
+
+
+@pytest.mark.parametrize("port", ["not-a-port", "65536", "-1", "0"])
+def test_invalid_tool_port_is_rejected_before_dispatch(port):
+    with pytest.raises(ValueError, match="invalid fixed tool base URL"):
+        Settings.from_env({**environment(), "TOOL_BASE_URL": f"http://localhost:{port}"})
+
+
+@pytest.mark.parametrize(
+    "url",
+    ["http://localhost", "http://localhost:80", "http://localhost:65535", "http://[::1]:8001"],
+)
+def test_valid_tool_ports_preserve_the_configured_destination(url):
+    assert Settings.from_env({**environment(), "TOOL_BASE_URL": url}).tool_base_url == url
